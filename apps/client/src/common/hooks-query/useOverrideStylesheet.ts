@@ -35,7 +35,6 @@ export default function useOverrideStylesheet() {
     if (!styleSheet) {
       styleSheet = document.createElement('style');
       styleSheet.setAttribute('id', scriptTagId);
-      document.head.append(styleSheet);
     }
 
     styleSheet.innerHTML = data ?? '';
