@@ -60,7 +60,7 @@ export const setMessage = {
 export const usePlaybackControl = createSelector((state: RuntimeStore) => ({
   playback: state.timer.playback,
   selectedEventIndex: state.runtime.selectedEventIndex,
-  numEvents: state.runtime.numEvents,
+  numEvents: state.rundownInfo.numEvents,
   timerPhase: state.timer.phase,
 }));
 
@@ -159,17 +159,20 @@ export const useProgressData = createSelector((state: RuntimeStore) => ({
 }));
 
 export const useRuntimeOverview = createSelector((state: RuntimeStore) => ({
-  plannedStart: state.runtime.plannedStart,
+  plannedStart: state.rundownInfo.plannedStart,
   actualStart: state.runtime.actualStart,
-  plannedEnd: state.runtime.plannedEnd,
-  expectedEnd: state.runtime.expectedEnd,
+  plannedEnd:
+    state.rundownInfo.plannedStart === null ? null : state.rundownInfo.plannedStart + state.rundownInfo.totalDuration,
+  expectedEnd:
+    state.runtime.actualStart === null
+      ? null
+      : state.runtime.actualStart + state.rundownInfo.totalDuration + state.rundownInfo.totalDelay,
 }));
 
 export const useRuntimePlaybackOverview = createSelector((state: RuntimeStore) => ({
   playback: state.timer.playback,
   clock: state.clock,
-
-  numEvents: state.runtime.numEvents,
+  numEvents: state.rundownInfo.numEvents,
   selectedEventIndex: state.runtime.selectedEventIndex,
   offset: state.runtime.offsetMode === OffsetMode.Absolute ? state.runtime.offset : state.runtime.relativeOffset,
 
@@ -187,7 +190,7 @@ export const useTimeUntilData = createSelector((state: RuntimeStore) => ({
   offsetMode: state.runtime.offsetMode,
   currentDay: state.eventNow?.dayOffset ?? 0,
   actualStart: state.runtime.actualStart,
-  plannedStart: state.runtime.plannedStart,
+  plannedStart: state.rundownInfo.plannedStart,
 }));
 
 export const useCurrentDay = createSelector((state: RuntimeStore) => ({

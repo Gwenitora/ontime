@@ -31,14 +31,16 @@ export const runtimeStorePlaceholder: Readonly<RuntimeStore> = {
   },
   runtime: {
     selectedEventIndex: null, // changes if rundown changes or we load a new event
-    numEvents: 0, // change initiated by user
     offset: 0, // changes at runtime
     relativeOffset: 0, // changes at runtime
-    plannedStart: 0, // only changes if event changes
-    plannedEnd: 0, // only changes if event changes, overflows over dayInMs
     actualStart: null, // set once we start the timer
-    expectedEnd: null, // changes with runtime, based on offset, overflows over dayInMs
     offsetMode: OffsetMode.Absolute,
+  },
+  rundownInfo: {
+    numEvents: 0, // change initiated by user
+    plannedStart: 0, // only changes if event changes
+    totalDelay: 0,
+    totalDuration: 0,
   },
   blockNow: null,
   blockNext: null,

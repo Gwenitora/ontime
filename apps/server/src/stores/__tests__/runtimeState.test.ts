@@ -34,7 +34,6 @@ const mockState = {
   eventNext: null,
   runtime: {
     selectedEventIndex: null,
-    numEvents: 0,
   },
   timer: {
     addedTime: 0,
@@ -182,8 +181,8 @@ describe('mutation on runtimeState', () => {
       load(entries.event1, rundown, metadata);
       let newState = getState();
       expect(newState.runtime.actualStart).toBeNull();
-      expect(newState.runtime.plannedStart).toBe(0);
-      expect(newState.runtime.plannedEnd).toBe(1500);
+      expect(newState._rundown.plannedStart).toBe(0);
+      expect((metadata.firstStart ?? 0) + metadata.totalDuration).toBe(1500);
       expect(newState.blockNow).toBeNull();
       expect(newState.runtime.offset).toBe(0);
 
@@ -197,7 +196,6 @@ describe('mutation on runtimeState', () => {
 
       expect(newState.runtime.actualStart).toBe(newState.clock);
       expect(newState.runtime.offset).toBe(entries.event1.timeStart - newState.clock);
-      expect(newState.runtime.expectedEnd).toBe(entries.event2.timeEnd - newState.runtime.offset);
 
       // 3. Next event
       load(entries.event2, rundown, metadata);
@@ -215,8 +213,6 @@ describe('mutation on runtimeState', () => {
       // we are over-under, the difference between the schedule and the actual start
       const delayBefore = entries.event2.timeStart - newState.clock;
       expect(newState.runtime.offset).toBe(delayBefore);
-      // finish is the difference between the runtime and the schedule
-      expect(newState.runtime.expectedEnd).toBe(entries.event2.timeEnd - newState.runtime.offset);
       expect(newState.blockNow).toBeNull();
 
       // 4. Add time
@@ -227,14 +223,12 @@ describe('mutation on runtimeState', () => {
       }
 
       expect(newState.runtime.offset).toBe(delayBefore - 10);
-      expect(newState.runtime.expectedEnd).toBe(entries.event2.timeEnd - newState.runtime.offset);
 
       // 5. Stop event
       stop();
       newState = getState();
       expect(newState.runtime.actualStart).toBeNull();
       expect(newState.runtime.offset).toBe(0);
-      expect(newState.runtime.expectedEnd).toBeNull();
     });
   });
 });

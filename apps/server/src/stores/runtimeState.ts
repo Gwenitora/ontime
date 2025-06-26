@@ -16,13 +16,7 @@ import { calculateDuration, checkIsNow, dayInMs, isPlaybackActive } from 'ontime
 
 import { timeNow } from '../utils/time.js';
 import type { RestorePoint } from '../services/RestoreService.js';
-import {
-  getCurrent,
-  getExpectedEnd,
-  getExpectedFinish,
-  getRuntimeOffset,
-  getTimerPhase,
-} from '../services/timerUtils.js';
+import { getCurrent, getExpectedFinish, getRuntimeOffset, getTimerPhase } from '../services/timerUtils.js';
 import { loadRoll, normaliseRollStart } from '../services/rollUtils.js';
 import { timerConfig } from '../setup/config.js';
 import { RundownMetadata } from '../api-data/rundown/rundown.types.js';
@@ -43,7 +37,8 @@ export type RuntimeState = {
     secondaryTarget: MaybeNumber;
   };
   _rundown: {
-    totalDelay: number; // this value comes from rundown service
+    plannedStart: MaybeNumber;
+    // totalDelay: number; // this value comes from rundown service
   };
 };
 
@@ -61,7 +56,8 @@ const runtimeState: RuntimeState = {
     secondaryTarget: null,
   },
   _rundown: {
-    totalDelay: 0,
+    plannedStart: null,
+    // totalDelay: 0,
   },
 };
 
@@ -87,7 +83,6 @@ export function clearEventData() {
 
   runtimeState.runtime.offset = 0;
   runtimeState.runtime.relativeOffset = 0;
-  runtimeState.runtime.expectedEnd = null;
   runtimeState.runtime.selectedEventIndex = null;
 
   runtimeState.timer.playback = Playback.Stop;
@@ -111,7 +106,6 @@ export function clearState() {
   runtimeState.runtime.offset = 0;
   runtimeState.runtime.relativeOffset = 0;
   runtimeState.runtime.actualStart = null;
-  runtimeState.runtime.expectedEnd = null;
   runtimeState.runtime.selectedEventIndex = null;
 
   runtimeState.timer.playback = Playback.Stop;
@@ -142,27 +136,14 @@ function patchTimer(newState: Partial<TimerState & RestorePoint>) {
   }
 }
 
-type RundownData = {
-  numEvents: number; // length of rundown filtered for timed events
-  firstStart: MaybeNumber;
-  lastEnd: MaybeNumber;
-  totalDelay: number;
-  totalDuration: number;
-};
-
 /**
  * Utility, allows updating data derived from the rundown
  * @param playableRundown
  */
-export function updateRundownData(rundownData: RundownData) {
+export function updateRundownData(metadata: RundownMetadata) {
   // we keep this in private state since there is no UI use case for it
-  runtimeState._rundown.totalDelay = rundownData.totalDelay;
-
-  runtimeState.runtime.numEvents = rundownData.numEvents;
-  runtimeState.runtime.plannedStart = rundownData.firstStart;
-  runtimeState.runtime.plannedEnd =
-    rundownData.firstStart === null ? null : rundownData.firstStart + rundownData.totalDuration;
-  runtimeState.runtime.expectedEnd = getExpectedEnd(runtimeState);
+  // runtimeState._rundown.totalDelay = metadata.totalDelay;
+  runtimeState._rundown.plannedStart = metadata.firstStart;
 }
 
 /**
@@ -196,7 +177,6 @@ export function load(
   runtimeState.timer.playback = Playback.Armed;
   runtimeState.timer.duration = calculateDuration(event.timeStart, event.timeEnd);
   runtimeState.timer.current = getCurrent(runtimeState);
-  runtimeState.runtime.numEvents = metadata.timedEventOrder.length;
 
   // patch with potential provided data
   if (initialData) {
@@ -207,7 +187,6 @@ export function load(
       const { absoluteOffset, relativeOffset } = getRuntimeOffset(runtimeState);
       runtimeState.runtime.offset = absoluteOffset;
       runtimeState.runtime.relativeOffset = relativeOffset;
-      runtimeState.runtime.expectedEnd = getExpectedEnd(runtimeState);
     }
     if (typeof initialData.blockStartAt === 'number' && runtimeState.blockNow) {
       runtimeState.blockNow.startedAt = initialData.blockStartAt;
@@ -378,15 +357,6 @@ export function start(state: RuntimeState = runtimeState): boolean {
   runtimeState.runtime.offset = absoluteOffset;
   runtimeState.runtime.relativeOffset = relativeOffset;
 
-  // as long as there is a timer, we need an planned end
-  // eslint-disable-next-line no-unused-labels -- dev code path
-  DEV: {
-    if (state.runtime.plannedEnd === null) {
-      throw new Error('runtimeState.start: invalid state received');
-    }
-  }
-
-  state.runtime.expectedEnd = state.runtime.plannedEnd - state.runtime.offset;
   return true;
 }
 
@@ -449,7 +419,6 @@ export function addTime(amount: number) {
   const { absoluteOffset, relativeOffset } = getRuntimeOffset(runtimeState);
   runtimeState.runtime.offset = absoluteOffset;
   runtimeState.runtime.relativeOffset = relativeOffset;
-  runtimeState.runtime.expectedEnd = getExpectedEnd(runtimeState);
 
   return true;
 }
@@ -496,7 +465,6 @@ export function update(): UpdateResult {
   const { absoluteOffset, relativeOffset } = getRuntimeOffset(runtimeState);
   runtimeState.runtime.offset = absoluteOffset;
   runtimeState.runtime.relativeOffset = relativeOffset;
-  runtimeState.runtime.expectedEnd = getExpectedEnd(runtimeState);
 
   const finishedNow =
     Boolean(runtimeState._timer.forceFinish) ||
@@ -620,7 +588,6 @@ export function roll(
 
   // update roll state
   runtimeState.timer.playback = Playback.Roll;
-  runtimeState.runtime.numEvents = metadata.timedEventOrder.length;
 
   // in roll mode spec, there should always be something to load
   // as long as playableEvents is not empty

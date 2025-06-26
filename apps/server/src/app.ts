@@ -185,6 +185,12 @@ export const startServer = async (): Promise<{ message: string; serverPort: numb
     eventNext: state.eventNext,
     blockNow: null,
     blockNext: null,
+    rundownInfo: {
+      numEvents: 0,
+      plannedStart: null,
+      totalDuration: 0,
+      totalDelay: 0,
+    },
     auxtimer1: {
       duration: timerConfig.auxTimerDefault,
       current: timerConfig.auxTimerDefault,

@@ -22,6 +22,7 @@ import { createTransaction, customFieldMutation, rundownCache, rundownMutation }
 import type { RundownMetadata } from './rundown.types.js';
 import { generateEvent, getInsertAfterId, hasChanges } from './rundown.utils.js';
 import { sendRefetch } from '../../adapters/WebsocketAdapter.js';
+import { eventStore } from '../../stores/EventStore.js';
 
 /**
  * creates a new entry with given data
@@ -515,12 +516,17 @@ export async function deleteCustomField(key: CustomFieldKey): Promise<CustomFiel
 export function updateRuntimeOnChange(rundownMetadata: RundownMetadata) {
   // we only declare the amount of playable events
   const numEvents = rundownMetadata.timedEventOrder.length;
-
+  const { firstStart, totalDuration, totalDelay } = rundownMetadata;
   // schedule an update for the end of the event loop
-  updateRundownData({
-    numEvents,
-    ...rundownMetadata,
+  setImmediate(() => {
+    eventStore.set('rundownInfo', {
+      numEvents,
+      plannedStart: firstStart,
+      totalDuration,
+      totalDelay,
+    });
   });
+  updateRundownData(rundownMetadata);
 }
 
 type NotifyChangesOptions = {

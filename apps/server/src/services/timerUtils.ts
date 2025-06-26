@@ -125,7 +125,8 @@ export function getRuntimeOffset(state: RuntimeState): { absoluteOffset: number;
   const { clock } = state;
   const { countToEnd, timeStart } = state.eventNow;
   const { addedTime, current, startedAt } = state.timer;
-  const { actualStart, plannedStart } = state.runtime;
+  const actualStart = state.runtime.actualStart;
+  const plannedStart = state._rundown.plannedStart;
 
   // eslint-disable-next-line no-unused-labels -- dev code path
   DEV: {
@@ -164,17 +165,6 @@ export function getRuntimeOffset(state: RuntimeState): { absoluteOffset: number;
   }
 
   return { absoluteOffset: offset, relativeOffset };
-}
-
-/**
- * Calculates the expected end of the rundown
- */
-export function getExpectedEnd(state: RuntimeState): MaybeNumber {
-  // there is no expected end if we havent started
-  if (state.runtime.actualStart === null || state.runtime.plannedEnd === null) {
-    return null;
-  }
-  return state.runtime.plannedEnd - state.runtime.offset + state._rundown.totalDelay;
 }
 
 /**

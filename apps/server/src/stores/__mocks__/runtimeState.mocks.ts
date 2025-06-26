@@ -10,13 +10,9 @@ const baseState: RuntimeState = {
   blockNext: null,
   runtime: {
     selectedEventIndex: null,
-    numEvents: 0,
     offset: 0,
     relativeOffset: 0,
-    plannedStart: 0,
-    plannedEnd: 0,
     actualStart: null,
-    expectedEnd: null,
     offsetMode: OffsetMode.Absolute,
   },
   timer: {
@@ -37,7 +33,7 @@ const baseState: RuntimeState = {
     secondaryTarget: null,
   },
   _rundown: {
-    totalDelay: 0,
+    plannedStart: 0,
   },
 };
 

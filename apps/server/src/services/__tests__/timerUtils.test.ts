@@ -206,7 +206,6 @@ describe('getExpectedFinish()', () => {
         },
         runtime: {
           actualStart: 79200000,
-          plannedEnd: 600000,
         },
       } as RuntimeState;
 
@@ -359,9 +358,6 @@ describe('getCurrent()', () => {
           startedAt: null,
           finishedAt: null,
         },
-        runtime: {
-          plannedEnd: null,
-        },
         _timer: {
           pausedAt: null,
         },
@@ -384,9 +380,6 @@ describe('getCurrent()', () => {
           startedAt: 10,
           finishedAt: null,
         },
-        runtime: {
-          plannedEnd: 100,
-        },
         _timer: {
           pausedAt: null,
         },
@@ -408,9 +401,6 @@ describe('getCurrent()', () => {
           duration: 100,
           startedAt: 10,
           finishedAt: null,
-        },
-        runtime: {
-          plannedEnd: 100,
         },
         _timer: {
           pausedAt: null,
@@ -437,7 +427,6 @@ describe('getCurrent()', () => {
         },
         runtime: {
           actualStart: 79200000,
-          plannedEnd: 600000,
         },
         _timer: {
           pausedAt: null,
@@ -465,7 +454,6 @@ describe('getCurrent()', () => {
         },
         runtime: {
           actualStart: 82000000, // 22:46:40 <--- started now
-          plannedEnd: 81000000, // 22:30:00
         },
         _timer: {
           pausedAt: null,
@@ -737,6 +725,8 @@ describe('getRuntimeOffset()', () => {
       },
       runtime: {
         actualStart: 150,
+      },
+      _rundown: {
         plannedStart: 100,
       },
     } as RuntimeState;
@@ -761,6 +751,8 @@ describe('getRuntimeOffset()', () => {
       },
       runtime: {
         actualStart: 150,
+      },
+      _rundown: {
         plannedStart: 100,
       },
     } as RuntimeState;
@@ -786,6 +778,8 @@ describe('getRuntimeOffset()', () => {
       },
       runtime: {
         actualStart: 100,
+      },
+      _rundown: {
         plannedStart: 100,
       },
     } as RuntimeState;
@@ -812,6 +806,8 @@ describe('getRuntimeOffset()', () => {
       },
       runtime: {
         actualStart: 100,
+      },
+      _rundown: {
         plannedStart: 100,
       },
     } as RuntimeState;
@@ -833,12 +829,8 @@ describe('getRuntimeOffset()', () => {
       },
       runtime: {
         selectedEventIndex: 0,
-        numEvents: 2,
         offset: -77400000,
-        plannedStart: 77400000,
-        plannedEnd: 84600000,
         actualStart: null,
-        expectedEnd: null,
       },
       timer: {
         addedTime: 0,
@@ -874,12 +866,12 @@ describe('getRuntimeOffset()', () => {
       },
       runtime: {
         selectedEventIndex: 1,
-        numEvents: 2,
         offset: -81000000,
-        plannedStart: 77400000,
-        plannedEnd: 84600000,
         actualStart: 79443403,
-        expectedEnd: null,
+      },
+      _rundown: {
+        plannedStart: 77400000,
+        // plannedEnd: 84600000,
       },
       timer: {
         addedTime: 0,
@@ -926,12 +918,12 @@ describe('getRuntimeOffset()', () => {
       },
       runtime: {
         selectedEventIndex: 0,
-        numEvents: 1,
         offset: 0,
-        plannedStart: 77400000, // 21:30:00
-        plannedEnd: 81000000, // 22:30:00
         actualStart: 78000000, // 21:40:00
-        expectedEnd: 81600000, // 22:40:00
+      },
+      _rundown: {
+        plannedStart: 77400000, // 21:30:00
+        // plannedEnd: 81000000, // 22:30:00
       },
       timer: {
         addedTime: 0,
@@ -978,12 +970,11 @@ describe('getRuntimeOffset()', () => {
       },
       runtime: {
         selectedEventIndex: 0,
-        numEvents: 1,
         offset: 0,
-        plannedStart: 77400000, // 21:30:00
-        plannedEnd: 81000000, // 22:30:00
         actualStart: 78000000, // 21:40:00
-        expectedEnd: 81600000, // 22:40:00
+      },
+      _rundown: {
+        plannedStart: 77400000, // 21:30:00
       },
       timer: {
         addedTime: -200000,
@@ -1019,12 +1010,11 @@ describe('getRuntimeOffset()', () => {
       },
       runtime: {
         selectedEventIndex: 0,
-        numEvents: 1,
         offset: 0,
-        plannedStart: 77400000, // 21:30:00
-        plannedEnd: 81000000, // 22:30:00
         actualStart: 82000000, // 22:46:40 <--- started now
-        expectedEnd: 82000000 + 3600000, // <--- now + duration
+      },
+      _rundown: {
+        plannedStart: 77400000, // 21:30:00
       },
       timer: {
         addedTime: 0,
@@ -1065,6 +1055,8 @@ describe('getRelativeOffset()', () => {
       },
       runtime: {
         actualStart: 150,
+      },
+      _rundown: {
         plannedStart: 150,
       },
     } as RuntimeState;
@@ -1089,6 +1081,8 @@ describe('getRelativeOffset()', () => {
       },
       runtime: {
         actualStart: 150,
+      },
+      _rundown: {
         plannedStart: 100,
       },
     } as RuntimeState;
@@ -1113,6 +1107,8 @@ describe('getRelativeOffset()', () => {
       },
       runtime: {
         actualStart: 100,
+      },
+      _rundown: {
         plannedStart: 150,
       },
     } as RuntimeState;
@@ -1223,12 +1219,8 @@ describe('getTimerPhase()', () => {
       eventNext: null,
       runtime: {
         selectedEventIndex: null,
-        numEvents: 1,
         offset: 0,
-        plannedStart: 55860000,
-        plannedEnd: 55880000,
         actualStart: null,
-        expectedEnd: null,
       },
       timer: {
         addedTime: 0,
@@ -1247,7 +1239,7 @@ describe('getTimerPhase()', () => {
         pausedAt: null,
       },
       _rundown: {
-        totalDelay: 0,
+        plannedStart: 55860000,
       },
     } as RuntimeState;
 
@@ -1262,12 +1254,8 @@ describe('getTimerPhase()', () => {
       eventNext: null,
       runtime: {
         selectedEventIndex: null,
-        numEvents: 1,
         offset: 0,
-        plannedStart: 55860000,
-        plannedEnd: 55880000,
         actualStart: null,
-        expectedEnd: null,
       },
       timer: {
         addedTime: 0,
@@ -1286,7 +1274,7 @@ describe('getTimerPhase()', () => {
         pausedAt: null,
       },
       _rundown: {
-        totalDelay: 0,
+        plannedStart: 55860000,
       },
     } as RuntimeState;
 
