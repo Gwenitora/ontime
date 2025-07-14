@@ -10,27 +10,29 @@ import * as Panel from '../../panel-utils/PanelUtils';
 import style from './ManagePanel.module.scss';
 import Tag from '../../../../common/components/tag/Tag';
 import { useState } from 'react';
-import { deleteRundown, loadRundown } from '../../../../common/api/rundown';
+import { deleteRundown, loadRundown, newRundown } from '../../../../common/api/rundown';
+import Input from '../../../../common/components/input/input/Input';
 
 export default function ManageRundowns() {
   const { data, refetch } = useProjectRundowns();
   const [isOpenDelete, deleteHandlers] = useDisclosure();
   const [isOpenLoad, loadHandlers] = useDisclosure();
-  const [targetId, setTargetId] = useState('');
+  const [isNewLoad, newHandlers] = useDisclosure();
+  const [value, setValue] = useState('');
 
   const openLoad = (id: string) => {
-    setTargetId(id);
+    setValue(id);
     loadHandlers.open();
   };
 
   const openDelete = (id: string) => {
-    setTargetId(id);
+    setValue(id);
     deleteHandlers.open();
   };
 
   const submitRundownLoad = async () => {
     try {
-      await loadRundown(targetId);
+      await loadRundown(value);
       loadHandlers.close();
     } catch (err) {
       //TODO: show the error somewhere
@@ -40,8 +42,20 @@ export default function ManageRundowns() {
 
   const submitRundownDelete = async () => {
     try {
-      await deleteRundown(targetId);
+      await deleteRundown(value);
       deleteHandlers.close();
+    } catch (err) {
+      //TODO: show the error somewhere
+      console.error(err);
+    } finally {
+      refetch();
+    }
+  };
+
+  const submitRundownNew = async () => {
+    try {
+      await newRundown(value);
+      newHandlers.close();
     } catch (err) {
       //TODO: show the error somewhere
       console.error(err);
@@ -57,7 +71,7 @@ export default function ManageRundowns() {
           <Panel.SubHeader>
             Manage project rundowns
             <Panel.InlineElements>
-              <Button onClick={() => undefined} disabled>
+              <Button onClick={newHandlers.open}>
                 New <IoAdd />
               </Button>
             </Panel.InlineElements>
@@ -140,6 +154,29 @@ export default function ManageRundowns() {
             </Button>
             <Button variant='primary' size='large' onClick={submitRundownLoad}>
               Load rundown
+            </Button>
+          </>
+        }
+      />
+      <Dialog
+        isOpen={isNewLoad}
+        onClose={newHandlers.close}
+        title='Delete rundown'
+        showBackdrop
+        showCloseButton
+        bodyElements={
+          <>
+            Write something here. <br /> Are you sure?
+            <Input fluid onChange={(e) => setValue(e.target.value)} />
+          </>
+        }
+        footerElements={
+          <>
+            <Button size='large' onClick={newHandlers.close}>
+              Cancel
+            </Button>
+            <Button variant='primary' size='large' onClick={submitRundownNew}>
+              Create rundown
             </Button>
           </>
         }

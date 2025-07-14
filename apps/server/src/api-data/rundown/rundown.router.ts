@@ -6,7 +6,7 @@ import {
   Rundown,
   ProjectRundown,
 } from 'ontime-types';
-import { getErrorMessage } from 'ontime-utils';
+import { customFieldLabelToKey, getErrorMessage } from 'ontime-utils';
 
 import type { Request, Response } from 'express';
 import express from 'express';
@@ -36,6 +36,7 @@ import {
 } from './rundown.validation.js';
 import { paramsWithId } from '../validation-utils/validationFunction.js';
 import { getDataProvider } from '../../classes/data-provider/DataProvider.js';
+import { defaultRundown } from '../../models/dataModel.js';
 
 export const router = express.Router();
 
@@ -214,6 +215,23 @@ router.delete('/whole/:id', paramsWithId, async (req: Request, res: Response<voi
 
     dataProvider.deleteRundown(req.params.id);
     res.status(204).send();
+  } catch (error) {
+    const message = getErrorMessage(error);
+    res.status(400).send({ message });
+  }
+});
+
+router.post('/new/:id', paramsWithId, async (req: Request, res: Response<void | ErrorResponse>) => {
+  try {
+    const title = req.params.id;
+    const id = customFieldLabelToKey(title);
+    if (req.params.id === getCurrentRundown().id) {
+      res.status(400).send({ message: 'already exists' });
+      return;
+    }
+    const emptyRundown = { ...defaultRundown, id, title };
+    await getDataProvider().setRundown(id, emptyRundown);
+    res.status(201).send();
   } catch (error) {
     const message = getErrorMessage(error);
     res.status(400).send({ message });

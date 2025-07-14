@@ -35,6 +35,12 @@ export async function deleteRundown(id: string): Promise<void> {
   await axios.delete(`${rundownPath}/whole/${id}`);
 }
 
+/**
+ * HTTP request to delete a rundown
+ */
+export async function newRundown(title: string): Promise<void> {
+  await axios.post(`${rundownPath}/new/${title}`);
+}
 
 /**
  * HTTP request to fetch all events
