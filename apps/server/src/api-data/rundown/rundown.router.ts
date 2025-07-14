@@ -1,4 +1,11 @@
-import { ErrorResponse, MessageResponse, OntimeEntry, ProjectRundownsList, Rundown } from 'ontime-types';
+import {
+  ErrorResponse,
+  MessageResponse,
+  OntimeEntry,
+  ProjectRundownsList,
+  Rundown,
+  ProjectRundown,
+} from 'ontime-types';
 import { getErrorMessage } from 'ontime-utils';
 
 import type { Request, Response } from 'express';
@@ -36,20 +43,14 @@ export const router = express.Router();
  * Returns all rundowns in the project
  */
 router.get('/', async (_req: Request, res: Response<ProjectRundownsList>) => {
-  const rundown = getCurrentRundown();
-
-  // TODO: we currently make a project with only the current rundown
-  res.json({
-    loaded: rundown.id,
-    rundowns: [
-      {
-        id: rundown.id,
-        title: rundown.title,
-        numEntries: rundown.order.length,
-        revision: rundown.revision,
-      },
-    ],
+  const fullRundowns = getDataProvider().getProjectRundowns();
+  const rundowns: ProjectRundown[] = Object.values(fullRundowns).map(({ id, flatOrder, title, revision }) => {
+    //TODO: what are we expecting in the entries? just events or everything
+    return { id, numEntries: flatOrder.length, title, revision };
   });
+  const loaded = getCurrentRundown().id;
+
+  res.json({ loaded, rundowns });
 });
 
 /**

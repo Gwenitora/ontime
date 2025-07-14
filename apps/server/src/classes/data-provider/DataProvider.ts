@@ -59,6 +59,7 @@ export function getDataProvider() {
     getAutomation,
     setAutomation,
     getRundown,
+    getProjectRundowns,
     mergeIntoData,
   };
 }
@@ -149,6 +150,10 @@ async function setAutomation(newData: AutomationSettings): ReadonlyPromise<Autom
 function getRundown(rundownKey: string): Readonly<Rundown> {
   if (!(rundownKey in db.data.rundowns)) throw new Error(`Rundown with id: ${rundownKey} dose not exist in DB`);
   return db.data.rundowns[rundownKey];
+}
+
+function getProjectRundowns(): Readonly<ProjectRundowns> {
+  return db.data.rundowns;
 }
 
 async function mergeIntoData(newData: Partial<DatabaseModel>): ReadonlyPromise<DatabaseModel> {
