@@ -172,10 +172,11 @@ router.delete('/all', async (_req: Request, res: Response<Rundown | ErrorRespons
   }
 });
 
-router.get('/switch/:id', paramsWithId, async (req: Request, res: Response<void | ErrorResponse>) => {
+router.get('/load/:id', paramsWithId, async (req: Request, res: Response<void | ErrorResponse>) => {
   try {
     if (req.params.id === getCurrentRundown().id) {
       res.status(400).send({ message: 'will not re-switch to the already loaded rundown' });
+      return;
     }
     const dataProvider = getDataProvider();
     const rundown = dataProvider.getRundown(req.params.id);

@@ -22,6 +22,13 @@ export async function fetchProjectRundownList(): Promise<ProjectRundownsList> {
 }
 
 /**
+ * HTTP request to switch the active rundown
+ */
+export async function loadRundown(id: string): Promise<void> {
+  await axios.get(`${rundownPath}/load/${id}`);
+}
+
+/**
  * HTTP request to fetch all events
  */
 export async function fetchCurrentRundown(): Promise<Rundown> {

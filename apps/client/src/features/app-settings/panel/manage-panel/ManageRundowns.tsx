@@ -8,11 +8,31 @@ import { cx } from '../../../../common/utils/styleUtils';
 import * as Panel from '../../panel-utils/PanelUtils';
 
 import style from './ManagePanel.module.scss';
+import Tag from '../../../../common/components/tag/Tag';
+import { useState } from 'react';
+import { loadRundown } from '../../../../common/api/rundown';
 
 export default function ManageRundowns() {
   const { data } = useProjectRundowns();
-  const [deleteOpen, deleteHandlers] = useDisclosure();
-  const [loadOpen, loadHandlers] = useDisclosure();
+  const [isOpenDelete, deleteHandlers] = useDisclosure();
+  const [isOpenLoad, loadHandlers] = useDisclosure();
+  const [targetId, setTargetId] = useState('');
+
+  const openLoad = (id: string) => {
+    setTargetId(id);
+    loadHandlers.open();
+  };
+
+
+  const submitRundownLoad = async () => {
+    try {
+      await loadRundown(targetId);
+      loadHandlers.close();
+    } catch (err) {
+      //TODO: show the error somewhere
+      console.error(err);
+    }
+  };
 
   return (
     <>
@@ -36,14 +56,16 @@ export default function ManageRundowns() {
               </tr>
             </thead>
             <tbody>
-              {data.rundowns.map((rundown) => {
-                const isLoaded = data.loaded === rundown.id;
+              {data.rundowns.map(({ id, numEntries, title }) => {
+                const isLoaded = data.loaded === id;
                 return (
-                  <tr key={rundown.id} className={cx([isLoaded && style.current])}>
-                    <td>{rundown.numEntries}</td>
-                    <td>{`${rundown.title}${isLoaded && ' (loaded)'}`}</td>
+                  <tr key={id} className={cx([isLoaded && style.current])}>
+                    <td>{numEntries}</td>
+                    <td>
+                      {title} {isLoaded && <Tag>Loaded</Tag>}
+                    </td>
                     <Panel.InlineElements as='td'>
-                      <Button size='small' onClick={() => loadHandlers.open()} disabled={isLoaded}>
+                      <Button size='small' onClick={() => openLoad(id)} disabled={isLoaded}>
                         Load
                       </Button>
                       <Button
@@ -63,7 +85,7 @@ export default function ManageRundowns() {
         </Panel.Card>
       </Panel.Section>
       <Dialog
-        isOpen={deleteOpen}
+        isOpen={isOpenDelete}
         onClose={deleteHandlers.close}
         title='Load rundown'
         showBackdrop
@@ -85,7 +107,7 @@ export default function ManageRundowns() {
         }
       />
       <Dialog
-        isOpen={loadOpen}
+        isOpen={isOpenLoad}
         onClose={loadHandlers.close}
         title='Delete rundown'
         showBackdrop
@@ -100,7 +122,7 @@ export default function ManageRundowns() {
             <Button size='large' onClick={loadHandlers.close}>
               Cancel
             </Button>
-            <Button variant='primary' size='large' onClick={() => undefined}>
+            <Button variant='primary' size='large' onClick={submitRundownLoad}>
               Load rundown
             </Button>
           </>
