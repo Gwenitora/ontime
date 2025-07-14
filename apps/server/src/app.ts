@@ -36,9 +36,8 @@ import { restoreService } from './services/RestoreService.js';
 import * as messageService from './services/message-service/message.service.js';
 import { populateDemo } from './setup/loadDemo.js';
 import { getState } from './stores/runtimeState.js';
-import { initRundown } from './api-data/rundown/rundown.service.js';
 import { initialiseProject } from './services/project-service/ProjectService.js';
-import { getLastLoadedRundown, getShowWelcomeDialog } from './services/app-state-service/AppStateService.js';
+import { getShowWelcomeDialog } from './services/app-state-service/AppStateService.js';
 import { oscServer } from './adapters/OscAdapter.js';
 
 // Utilities
@@ -206,12 +205,6 @@ export const startServer = async (): Promise<{ message: string; serverPort: numb
     },
     ping: -1,
   });
-
-  // initialise rundown service
-  const rundownKey = await getLastLoadedRundown();
-  const persistedRundown = getDataProvider().getRundown(rundownKey!);
-  const persistedCustomFields = getDataProvider().getCustomFields();
-  await initRundown(persistedRundown, persistedCustomFields);
 
   // initialise message service
   messageService.init(eventStore.set, eventStore.get);
