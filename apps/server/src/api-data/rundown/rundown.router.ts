@@ -14,6 +14,7 @@ import {
   deleteEntries,
   editEntry,
   groupEntries,
+  initRundown,
   reorderEntry,
   swapEvents,
   ungroupEntries,
@@ -27,6 +28,7 @@ import {
   rundownSwapValidator,
 } from './rundown.validation.js';
 import { paramsWithId } from '../validation-utils/validationFunction.js';
+import { getDataProvider } from '../../classes/data-provider/DataProvider.js';
 
 export const router = express.Router();
 
@@ -163,6 +165,22 @@ router.delete('/all', async (_req: Request, res: Response<Rundown | ErrorRespons
   try {
     const rundown = await deleteAllEntries();
     res.status(204).send(rundown);
+  } catch (error) {
+    const message = getErrorMessage(error);
+    res.status(400).send({ message });
+  }
+});
+
+router.get('/switch/:id', paramsWithId, async (req: Request, res: Response<void | ErrorResponse>) => {
+  try {
+    if (req.params.id === getCurrentRundown().id) {
+      res.status(400).send({ message: 'will not re-switch to the already loaded rundown' });
+    }
+    const dataProvider = getDataProvider();
+    const rundown = dataProvider.getRundown(req.params.id);
+    const customField = dataProvider.getCustomFields();
+    await initRundown(rundown, customField);
+    res.status(201).send();
   } catch (error) {
     const message = getErrorMessage(error);
     res.status(400).send({ message });
