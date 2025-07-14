@@ -61,6 +61,7 @@ export function getDataProvider() {
     getRundown,
     getProjectRundowns,
     mergeIntoData,
+    deleteRundown,
   };
 }
 
@@ -150,6 +151,12 @@ async function setAutomation(newData: AutomationSettings): ReadonlyPromise<Autom
 function getRundown(rundownKey: string): Readonly<Rundown> {
   if (!(rundownKey in db.data.rundowns)) throw new Error(`Rundown with id: ${rundownKey} dose not exist in DB`);
   return db.data.rundowns[rundownKey];
+}
+
+async function deleteRundown(rundownKey: string): Promise<void> {
+  if (!(rundownKey in db.data.rundowns)) throw new Error(`Rundown with id: ${rundownKey} dose not exist in DB`);
+  delete db.data.rundowns[rundownKey];
+  await persist();
 }
 
 function getProjectRundowns(): Readonly<ProjectRundowns> {

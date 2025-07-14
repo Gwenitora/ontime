@@ -10,10 +10,10 @@ import * as Panel from '../../panel-utils/PanelUtils';
 import style from './ManagePanel.module.scss';
 import Tag from '../../../../common/components/tag/Tag';
 import { useState } from 'react';
-import { loadRundown } from '../../../../common/api/rundown';
+import { deleteRundown, loadRundown } from '../../../../common/api/rundown';
 
 export default function ManageRundowns() {
-  const { data } = useProjectRundowns();
+  const { data, refetch } = useProjectRundowns();
   const [isOpenDelete, deleteHandlers] = useDisclosure();
   const [isOpenLoad, loadHandlers] = useDisclosure();
   const [targetId, setTargetId] = useState('');
@@ -23,6 +23,10 @@ export default function ManageRundowns() {
     loadHandlers.open();
   };
 
+  const openDelete = (id: string) => {
+    setTargetId(id);
+    deleteHandlers.open();
+  };
 
   const submitRundownLoad = async () => {
     try {
@@ -31,6 +35,18 @@ export default function ManageRundowns() {
     } catch (err) {
       //TODO: show the error somewhere
       console.error(err);
+    }
+  };
+
+  const submitRundownDelete = async () => {
+    try {
+      await deleteRundown(targetId);
+      deleteHandlers.close();
+    } catch (err) {
+      //TODO: show the error somewhere
+      console.error(err);
+    } finally {
+      refetch();
     }
   };
 
@@ -71,7 +87,7 @@ export default function ManageRundowns() {
                       <Button
                         size='small'
                         variant='subtle-destructive'
-                        onClick={() => deleteHandlers.open()}
+                        onClick={() => openDelete(id)}
                         disabled={isLoaded}
                       >
                         Delete
@@ -100,7 +116,7 @@ export default function ManageRundowns() {
             <Button size='large' onClick={deleteHandlers.close}>
               Cancel
             </Button>
-            <Button variant='destructive' size='large' onClick={() => undefined}>
+            <Button variant='destructive' size='large' onClick={submitRundownDelete}>
               Delete rundown
             </Button>
           </>

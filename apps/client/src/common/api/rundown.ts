@@ -29,6 +29,14 @@ export async function loadRundown(id: string): Promise<void> {
 }
 
 /**
+ * HTTP request to delete a rundown
+ */
+export async function deleteRundown(id: string): Promise<void> {
+  await axios.delete(`${rundownPath}/whole/${id}`);
+}
+
+
+/**
  * HTTP request to fetch all events
  */
 export async function fetchCurrentRundown(): Promise<Rundown> {

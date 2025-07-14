@@ -188,3 +188,34 @@ router.get('/load/:id', paramsWithId, async (req: Request, res: Response<void | 
     res.status(400).send({ message });
   }
 });
+
+//TODO: is this route getting confusing in its combination with entry editing
+// what to call this endpoint
+router.delete('/whole/:id', paramsWithId, async (req: Request, res: Response<void | ErrorResponse>) => {
+  try {
+    if (req.params.id === getCurrentRundown().id) {
+      res.status(400).send({ message: 'will not delete loaded rundown' });
+      return;
+    }
+
+    const dataProvider = getDataProvider();
+    const fullRundowns = dataProvider.getProjectRundowns();
+
+    if (Object.keys(fullRundowns).length <= 1) {
+      //TODO: might never hit this as it is likely covered by the case of trying to delete the loaded rundown
+      res.status(400).send({ message: 'will not delete the last rundown' });
+      return;
+    }
+
+    if (!(req.params.id in fullRundowns)) {
+      res.status(400).send({ message: 'id dose not exist' });
+      return;
+    }
+
+    dataProvider.deleteRundown(req.params.id);
+    res.status(204).send();
+  } catch (error) {
+    const message = getErrorMessage(error);
+    res.status(400).send({ message });
+  }
+});
