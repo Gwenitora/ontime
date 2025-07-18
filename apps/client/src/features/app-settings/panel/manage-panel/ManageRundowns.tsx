@@ -1,17 +1,17 @@
+import { useState } from 'react';
 import { IoAdd } from 'react-icons/io5';
 import { useDisclosure } from '@mantine/hooks';
 
+import { deleteRundown, loadRundown, newRundown } from '../../../../common/api/rundown';
 import Button from '../../../../common/components/buttons/Button';
 import Dialog from '../../../../common/components/dialog/Dialog';
+import Input from '../../../../common/components/input/input/Input';
+import Tag from '../../../../common/components/tag/Tag';
 import { useProjectRundowns } from '../../../../common/hooks-query/useProjectRundowns';
 import { cx } from '../../../../common/utils/styleUtils';
 import * as Panel from '../../panel-utils/PanelUtils';
 
 import style from './ManagePanel.module.scss';
-import Tag from '../../../../common/components/tag/Tag';
-import { useState } from 'react';
-import { deleteRundown, loadRundown, newRundown } from '../../../../common/api/rundown';
-import Input from '../../../../common/components/input/input/Input';
 
 export default function ManageRundowns() {
   const { data, refetch } = useProjectRundowns();
@@ -166,7 +166,7 @@ export default function ManageRundowns() {
         showCloseButton
         bodyElements={
           <>
-            Write something here. <br /> Are you sure?
+            Write the name of the new rundown
             <Input fluid onChange={(e) => setValue(e.target.value)} />
           </>
         }
