@@ -1,4 +1,4 @@
-import { Log, LogLevel, MessageTag } from 'ontime-types';
+import { Log, LogLevel, MessageTag } from '@getontime/types';
 import { generateId, millisToString } from 'ontime-utils';
 
 import { socket } from '../adapters/WebsocketAdapter.js';

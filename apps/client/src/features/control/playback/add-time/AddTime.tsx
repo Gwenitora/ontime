@@ -1,6 +1,6 @@
 import { IoAdd, IoRemove } from 'react-icons/io5';
+import { Playback } from '@getontime/types';
 import { useLocalStorage } from '@mantine/hooks';
-import { Playback } from 'ontime-types';
 import { MILLIS_PER_HOUR, parseUserTime } from 'ontime-utils';
 
 import TimeInput from '../../../../common/components/input/time-input/TimeInput';

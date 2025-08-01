@@ -1,4 +1,4 @@
-import { DatabaseModel, Rundown } from 'ontime-types';
+import { DatabaseModel, Rundown } from '@getontime/types';
 import { ONTIME_VERSION } from '../ONTIME_VERSION.js';
 
 export const defaultRundown: Rundown = {

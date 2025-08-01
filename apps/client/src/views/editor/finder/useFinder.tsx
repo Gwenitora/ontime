@@ -1,6 +1,6 @@
 import { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react';
+import { EntryId, isOntimeBlock, isOntimeEvent, MaybeString, SupportedEntry } from '@getontime/types';
 import { useSessionStorage } from '@mantine/hooks';
-import { EntryId, isOntimeBlock, isOntimeEvent, MaybeString, SupportedEntry } from 'ontime-types';
 
 import { useFlatRundown } from '../../../common/hooks-query/useRundown';
 import { useEventSelection } from '../../../features/rundown/useEventSelection';

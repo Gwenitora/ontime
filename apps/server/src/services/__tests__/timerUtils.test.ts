@@ -1,5 +1,5 @@
 import { dayInMs, millisToString } from 'ontime-utils';
-import { EndAction, Playback, TimeStrategy, TimerPhase, TimerType } from 'ontime-types';
+import { EndAction, Playback, TimeStrategy, TimerPhase, TimerType } from '@getontime/types';
 
 import {
   getCurrent,

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { IoPause, IoPlay, IoPlaySkipBack, IoPlaySkipForward, IoReload, IoStop } from 'react-icons/io5';
-import { Playback, TimerPhase } from 'ontime-types';
+import { Playback, TimerPhase } from '@getontime/types';
 import { validatePlayback } from 'ontime-utils';
 
 import { setPlayback } from '../../../../common/hooks/useSocket';

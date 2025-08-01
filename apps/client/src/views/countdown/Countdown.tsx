@@ -8,7 +8,7 @@ import {
   OntimeEvent,
   ProjectData,
   Settings,
-} from 'ontime-types';
+} from '@getontime/types';
 
 import Button from '../../common/components/buttons/Button';
 import Empty from '../../common/components/state/Empty';

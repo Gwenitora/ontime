@@ -1,5 +1,5 @@
+import { OntimeReport } from '@getontime/types';
 import axios from 'axios';
-import { OntimeReport } from 'ontime-types';
 
 import { ontimeQueryClient } from '../../common/queryClient';
 

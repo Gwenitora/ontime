@@ -1,5 +1,4 @@
 import { ComponentType } from 'react';
-import { ViewExtendedTimer } from 'common/models/TimeManager.type';
 import {
   CustomFields,
   MessageState,
@@ -10,7 +9,8 @@ import {
   SimpleTimerState,
   TimerType,
   ViewSettings,
-} from 'ontime-types';
+} from '@getontime/types';
+import { ViewExtendedTimer } from 'common/models/TimeManager.type';
 import { useStore } from 'zustand';
 
 import ViewNavigationMenu from '../../common/components/navigation-menu/ViewNavigationMenu';

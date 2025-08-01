@@ -1,4 +1,4 @@
-import { HTTPOutput, LogOrigin } from 'ontime-types';
+import { HTTPOutput, LogOrigin } from '@getontime/types';
 
 import { logger } from '../../../classes/Logger.js';
 import type { RuntimeState } from '../../../stores/runtimeState.js';

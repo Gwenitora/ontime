@@ -1,5 +1,5 @@
+import { Settings } from '@getontime/types';
 import axios, { AxiosResponse } from 'axios';
-import { Settings } from 'ontime-types';
 
 import { apiEntryUrl } from './constants';
 

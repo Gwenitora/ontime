@@ -1,4 +1,4 @@
-import { EndAction, TimerType, isKeyOfType } from 'ontime-types';
+import { EndAction, TimerType, isKeyOfType } from '@getontime/types';
 import { MILLIS_PER_SECOND, maxDuration } from 'ontime-utils';
 
 import { coerceBoolean, coerceColour, coerceEnum, coerceNumber, coerceString } from '../utils/coerceType.js';

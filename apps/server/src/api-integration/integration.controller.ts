@@ -6,7 +6,7 @@ import {
   PatchWithId,
   SimpleDirection,
   SimplePlayback,
-} from 'ontime-types';
+} from '@getontime/types';
 import { MILLIS_PER_HOUR } from 'ontime-utils';
 
 import { DeepPartial } from 'ts-essentials';

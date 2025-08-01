@@ -7,7 +7,7 @@ import type {
   Rundown,
   Trigger,
   TriggerDTO,
-} from 'ontime-types';
+} from '@getontime/types';
 import { deleteAtIndex, generateId } from 'ontime-utils';
 
 import { getDataProvider } from '../../classes/data-provider/DataProvider.js';

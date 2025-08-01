@@ -1,4 +1,4 @@
-import { CustomFieldKey, EntryId, MaybeNumber } from 'ontime-types';
+import { CustomFieldKey, EntryId, MaybeNumber } from '@getontime/types';
 
 export type RundownMetadata = {
   totalDelay: number;

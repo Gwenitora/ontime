@@ -11,7 +11,6 @@ import {
   useSensors,
 } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
-import { useHotkeys, useSessionStorage } from '@mantine/hooks';
 import {
   type EntryId,
   type MaybeString,
@@ -21,7 +20,8 @@ import {
   OntimeEntry,
   Playback,
   SupportedEntry,
-} from 'ontime-types';
+} from '@getontime/types';
+import { useHotkeys, useSessionStorage } from '@mantine/hooks';
 import {
   getFirstNormal,
   getLastNormal,

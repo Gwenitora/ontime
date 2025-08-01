@@ -1,4 +1,4 @@
-import { isOntimeBlock, isOntimeEvent, OntimeEvent, OntimeEntry, RGBColour } from 'ontime-types';
+import { isOntimeBlock, isOntimeEvent, OntimeEvent, OntimeEntry, RGBColour } from '@getontime/types';
 import { cssOrHexToColour, isLightColour, millisToString, mixColours } from 'ontime-utils';
 
 import type { sheets_v4 } from '@googleapis/sheets';

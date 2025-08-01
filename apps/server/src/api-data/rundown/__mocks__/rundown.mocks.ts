@@ -6,7 +6,7 @@ import {
   Rundown,
   CustomField,
   OntimeMilestone,
-} from 'ontime-types';
+} from '@getontime/types';
 
 import { defaultRundown } from '../../../models/dataModel.js';
 

@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { IoClose } from 'react-icons/io5';
-import { LogOrigin } from 'ontime-types';
+import { LogOrigin } from '@getontime/types';
 
 import Button from '../../common/components/buttons/Button';
 import { clearLogs, useLogData } from '../../common/stores/logger';

@@ -1,5 +1,5 @@
-import type { OntimeDelay, OntimeEntry, OntimeEvent, RundownEntries } from 'ontime-types';
-import { SupportedEntry } from 'ontime-types';
+import type { OntimeDelay, OntimeEntry, OntimeEvent, RundownEntries } from '@getontime/types';
+import { SupportedEntry } from '@getontime/types';
 
 import { getCueCandidate, getIncrement, sanitiseCue } from './cueUtils.js';
 

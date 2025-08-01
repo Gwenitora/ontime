@@ -21,7 +21,7 @@
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-prettier": "catalog:",
     "eslint-plugin-simple-import-sort": "^8.0.0",
-    "ontime-types": "workspace:*",
+    "@getontime/types": "workspace:*",
     "prettier": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"

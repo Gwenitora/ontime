@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { CustomField } from 'ontime-types';
+import { CustomField } from '@getontime/types';
 import { checkRegex, customFieldLabelToKey } from 'ontime-utils';
 
 import { maybeAxiosError } from '../../../../../common/api/utils';

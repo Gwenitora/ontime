@@ -1,8 +1,8 @@
 import { CSSProperties, ReactNode } from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+import { OntimeEntry } from '@getontime/types';
 import { Header } from '@tanstack/react-table';
-import { OntimeEntry } from 'ontime-types';
 
 import style from '../CuesheetTable.module.scss';
 

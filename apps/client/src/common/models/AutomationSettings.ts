@@ -1,4 +1,4 @@
-import { AutomationSettings } from 'ontime-types';
+import { AutomationSettings } from '@getontime/types';
 
 export const automationPlaceholderSettings: AutomationSettings = {
   enabledAutomations: false,

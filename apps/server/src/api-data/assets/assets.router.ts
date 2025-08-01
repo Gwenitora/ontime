@@ -1,6 +1,6 @@
 import express from 'express';
 import type { Request, Response } from 'express';
-import type { ErrorResponse } from 'ontime-types';
+import type { ErrorResponse } from '@getontime/types';
 import { validatePostCss } from './assets.validation.js';
 import { readCssFile, writeCssFile } from './assets.service.js';
 import { getErrorMessage } from 'ontime-utils';

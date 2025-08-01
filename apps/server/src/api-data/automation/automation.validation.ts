@@ -7,7 +7,7 @@ import {
   OSCOutput,
   SecondarySource,
   timerLifecycleValues,
-} from 'ontime-types';
+} from '@getontime/types';
 
 import { body, oneOf, param } from 'express-validator';
 

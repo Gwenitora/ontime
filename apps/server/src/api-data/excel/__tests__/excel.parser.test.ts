@@ -1,4 +1,4 @@
-import { CustomFields, OntimeEvent, SupportedEntry, TimerType } from 'ontime-types';
+import { CustomFields, OntimeEvent, SupportedEntry, TimerType } from '@getontime/types';
 import { defaultImportMap, ImportMap, MILLIS_PER_MINUTE } from 'ontime-utils';
 
 import { getCustomFieldData, parseExcel } from '../excel.parser.js';

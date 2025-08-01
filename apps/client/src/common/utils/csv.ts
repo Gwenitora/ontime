@@ -1,5 +1,5 @@
+import { OntimeEntry, ProjectRundowns } from '@getontime/types';
 import { stringify } from 'csv-stringify/browser/esm/sync';
-import { OntimeEntry, ProjectRundowns } from 'ontime-types';
 
 /**
  * Converts an array of arrays to a CSV file

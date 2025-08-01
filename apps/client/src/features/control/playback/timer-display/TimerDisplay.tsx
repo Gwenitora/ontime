@@ -1,4 +1,4 @@
-import { MaybeNumber } from 'ontime-types';
+import { MaybeNumber } from '@getontime/types';
 import { millisToString } from 'ontime-utils';
 
 import { cx, timerPlaceholder } from '../../../../common/utils/styleUtils';

@@ -15,7 +15,7 @@ import {
   Rundown,
   SupportedEntry,
   TimeStrategy,
-} from 'ontime-types';
+} from '@getontime/types';
 import {
   dayInMs,
   generateId,

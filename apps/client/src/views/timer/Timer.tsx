@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { CustomFields, MessageState, OntimeEvent, ProjectData, Settings, ViewSettings } from 'ontime-types';
+import { CustomFields, MessageState, OntimeEvent, ProjectData, Settings, ViewSettings } from '@getontime/types';
 
 import { FitText } from '../../common/components/fit-text/FitText';
 import MultiPartProgressBar from '../../common/components/multi-part-progress-bar/MultiPartProgressBar';

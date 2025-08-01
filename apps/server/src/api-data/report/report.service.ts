@@ -1,4 +1,4 @@
-import { OntimeReport, OntimeEventReport, TimerLifeCycle, RefetchKey } from 'ontime-types';
+import { OntimeReport, OntimeEventReport, TimerLifeCycle, RefetchKey } from '@getontime/types';
 import { RuntimeState } from '../../stores/runtimeState.js';
 import { DeepReadonly } from 'ts-essentials';
 import { sendRefetch } from '../../adapters/WebsocketAdapter.js';

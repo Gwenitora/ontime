@@ -1,5 +1,5 @@
 import { IoAdd } from 'react-icons/io5';
-import { SupportedEntry } from 'ontime-types';
+import { SupportedEntry } from '@getontime/types';
 
 import Button from '../../common/components/buttons/Button';
 import * as Editor from '../../common/components/editor-utils/EditorUtils';

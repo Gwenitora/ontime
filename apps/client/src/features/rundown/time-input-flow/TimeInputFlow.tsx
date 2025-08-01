@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { IoAlertCircleOutline, IoLink, IoLockClosed, IoLockOpenOutline, IoUnlink } from 'react-icons/io5';
-import { TimeField, TimeStrategy } from 'ontime-types';
+import { TimeField, TimeStrategy } from '@getontime/types';
 import { dayInMs } from 'ontime-utils';
 
 import IconButton from '../../../common/components/buttons/IconButton';

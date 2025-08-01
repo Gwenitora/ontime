@@ -1,5 +1,5 @@
+import { CustomFields } from '@getontime/types';
 import { useQuery } from '@tanstack/react-query';
-import { CustomFields } from 'ontime-types';
 
 import { queryRefetchIntervalSlow } from '../../ontimeConfig';
 import { CUSTOM_FIELDS } from '../api/constants';

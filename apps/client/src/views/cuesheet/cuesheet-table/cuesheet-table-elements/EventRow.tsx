@@ -1,8 +1,8 @@
 import { RefObject, useEffect, useRef } from 'react';
 import { IoEllipsisHorizontal } from 'react-icons/io5';
+import { OntimeEntry, OntimeEvent, RGBColour, SupportedEntry } from '@getontime/types';
 import { useSessionStorage } from '@mantine/hooks';
 import { flexRender, Table } from '@tanstack/react-table';
-import { OntimeEntry, OntimeEvent, RGBColour, SupportedEntry } from 'ontime-types';
 import { colourToHex, cssOrHexToColour } from 'ontime-utils';
 
 import IconButton from '../../../../common/components/buttons/IconButton';

@@ -8,7 +8,7 @@ import {
   isOntimeBlock,
   TimerType,
   CustomFieldKey,
-} from 'ontime-types';
+} from '@getontime/types';
 import {
   ImportMap,
   defaultImportMap,

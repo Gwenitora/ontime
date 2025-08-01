@@ -5,7 +5,7 @@
  *
  */
 
-import { ErrorResponse, LogOrigin } from 'ontime-types';
+import { ErrorResponse, LogOrigin } from '@getontime/types';
 
 import express, { type Request, type Response } from 'express';
 

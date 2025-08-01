@@ -1,4 +1,4 @@
-import { DatabaseModel, EndAction, SupportedEntry, TimeStrategy, TimerType } from 'ontime-types';
+import { DatabaseModel, EndAction, SupportedEntry, TimeStrategy, TimerType } from '@getontime/types';
 
 export const demoDb: DatabaseModel = {
   rundowns: {

@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { MaybeNumber, Playback, TimerPhase } from 'ontime-types';
+import { MaybeNumber, Playback, TimerPhase } from '@getontime/types';
 import { dayInMs, millisToString } from 'ontime-utils';
 
 import AppLink from '../../../../common/components/link/app-link/AppLink';

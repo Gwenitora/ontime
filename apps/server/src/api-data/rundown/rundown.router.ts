@@ -1,4 +1,4 @@
-import { ErrorResponse, MessageResponse, OntimeEntry, ProjectRundownsList, Rundown } from 'ontime-types';
+import { ErrorResponse, MessageResponse, OntimeEntry, ProjectRundownsList, Rundown } from '@getontime/types';
 import { getErrorMessage } from 'ontime-utils';
 
 import type { Request, Response } from 'express';

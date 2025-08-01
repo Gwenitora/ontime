@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { MessageTag } from 'ontime-types';
+import { MessageTag } from '@getontime/types';
 import { useShallow } from 'zustand/shallow';
 
 import { useClientStore } from '../stores/clientStore';

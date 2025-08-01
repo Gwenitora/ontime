@@ -7,7 +7,7 @@ import {
   type AutomationFilter,
   type AutomationOutput,
   type FilterRule,
-} from 'ontime-types';
+} from '@getontime/types';
 import { getPropertyFromPath } from 'ontime-utils';
 
 import { logger } from '../../classes/Logger.js';

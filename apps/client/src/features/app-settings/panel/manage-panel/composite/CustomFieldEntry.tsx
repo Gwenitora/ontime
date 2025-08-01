@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IoPencil, IoTrash } from 'react-icons/io5';
-import { CustomField, CustomFieldKey } from 'ontime-types';
+import { CustomField, CustomFieldKey } from '@getontime/types';
 
 import IconButton from '../../../../../common/components/buttons/IconButton';
 import CopyTag from '../../../../../common/components/copy-tag/CopyTag';

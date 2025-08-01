@@ -1,6 +1,6 @@
 import { memo, useMemo, useRef } from 'react';
+import { isOntimeEvent, isPlayableEvent, OntimeEntry, PlayableEvent } from '@getontime/types';
 import { useViewportSize } from '@mantine/hooks';
-import { isOntimeEvent, isPlayableEvent, OntimeEntry, PlayableEvent } from 'ontime-types';
 import { dayInMs, getLastEvent, MILLIS_PER_HOUR } from 'ontime-utils';
 
 import useHorizontalFollowComponent from '../../common/hooks/useHorizontalFollowComponent';

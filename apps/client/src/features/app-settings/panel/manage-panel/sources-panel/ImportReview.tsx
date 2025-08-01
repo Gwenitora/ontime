@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CustomFields, Rundown } from 'ontime-types';
+import { CustomFields, Rundown } from '@getontime/types';
 
 import Button from '../../../../../common/components/buttons/Button';
 import * as Panel from '../../../panel-utils/PanelUtils';

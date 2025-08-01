@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { MessageState, OntimeEvent, ProjectData, Runtime, Settings, ViewSettings } from 'ontime-types';
+import { MessageState, OntimeEvent, ProjectData, Runtime, Settings, ViewSettings } from '@getontime/types';
 
 import ViewLogo from '../../common/components/view-logo/ViewLogo';
 import ViewParamsEditor from '../../common/components/view-params-editor/ViewParamsEditor';

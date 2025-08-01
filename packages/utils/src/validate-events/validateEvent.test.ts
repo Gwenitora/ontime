@@ -1,4 +1,4 @@
-import { EndAction, TimerType } from 'ontime-types';
+import { EndAction, TimerType } from '@getontime/types';
 import { expect } from 'vitest';
 
 import { validateEndAction, validateTimerType } from './validateEvent.js';

@@ -1,4 +1,4 @@
-import { EndAction, TimerType, TimeStrategy } from 'ontime-types';
+import { EndAction, TimerType, TimeStrategy } from '@getontime/types';
 import { validateEndAction, validateTimerType, validateTimeStrategy } from 'ontime-utils';
 import { create } from 'zustand';
 

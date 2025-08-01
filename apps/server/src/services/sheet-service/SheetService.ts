@@ -4,7 +4,7 @@
  * @link https://developers.google.com/identity/protocols/oauth2/limited-input-device
  */
 
-import { AuthenticationStatus, CustomFields, DatabaseModel, LogOrigin, MaybeString, Rundown } from 'ontime-types';
+import { AuthenticationStatus, CustomFields, DatabaseModel, LogOrigin, MaybeString, Rundown } from '@getontime/types';
 import { ImportMap, getErrorMessage } from 'ontime-utils';
 
 import { sheets, type sheets_v4 } from '@googleapis/sheets';

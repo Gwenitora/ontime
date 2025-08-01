@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { MaybeString } from 'ontime-types';
+import { MaybeString } from '@getontime/types';
 
 import Schedule from './Schedule';
 import { ScheduleProvider } from './ScheduleContext';

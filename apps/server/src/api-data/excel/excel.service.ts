@@ -3,7 +3,7 @@
  * Google Sheets
  */
 
-import { CustomFields, Rundown } from 'ontime-types';
+import { CustomFields, Rundown } from '@getontime/types';
 import { type ImportMap } from 'ontime-utils';
 
 import { extname } from 'path';

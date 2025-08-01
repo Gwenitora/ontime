@@ -1,4 +1,4 @@
-import type { QuickStartData } from 'ontime-types';
+import type { QuickStartData } from '@getontime/types';
 
 export const quickStartDefaults: QuickStartData = {
   project: {

@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { MaybeNumber, OntimeBlock } from 'ontime-types';
+import { MaybeNumber, OntimeBlock } from '@getontime/types';
 import { millisToString } from 'ontime-utils';
 
 import * as Editor from '../../../common/components/editor-utils/EditorUtils';

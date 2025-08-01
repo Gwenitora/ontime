@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import QRCode from 'react-qr-code';
+import { CustomFields, OntimeEvent, ProjectData, Runtime, Settings } from '@getontime/types';
 import { useViewportSize } from '@mantine/hooks';
-import { CustomFields, OntimeEvent, ProjectData, Runtime, Settings } from 'ontime-types';
 import { millisToString, removeLeadingZero } from 'ontime-utils';
 
 import ProgressBar from '../../common/components/progress-bar/ProgressBar';

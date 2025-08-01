@@ -1,7 +1,7 @@
 import { IoEllipsisHorizontal } from 'react-icons/io5';
+import { EntryId, OntimeEntry, SupportedEntry } from '@getontime/types';
 import { useSessionStorage } from '@mantine/hooks';
 import { flexRender, Table } from '@tanstack/react-table';
-import { EntryId, OntimeEntry, SupportedEntry } from 'ontime-types';
 
 import IconButton from '../../../../common/components/buttons/IconButton';
 import { useCurrentBlockId } from '../../../../common/hooks/useSocket';

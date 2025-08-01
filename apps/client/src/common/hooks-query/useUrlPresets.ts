@@ -1,5 +1,5 @@
+import { URLPreset } from '@getontime/types';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { URLPreset } from 'ontime-types';
 
 import { queryRefetchIntervalSlow } from '../../ontimeConfig';
 import { URL_PRESETS } from '../api/constants';

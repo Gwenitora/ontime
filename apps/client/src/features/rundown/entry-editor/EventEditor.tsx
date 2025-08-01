@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { OntimeEvent } from 'ontime-types';
+import { OntimeEvent } from '@getontime/types';
 
 import * as Editor from '../../../common/components/editor-utils/EditorUtils';
 import AppLink from '../../../common/components/link/app-link/AppLink';

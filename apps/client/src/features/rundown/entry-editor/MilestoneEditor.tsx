@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { OntimeMilestone } from 'ontime-types';
+import { OntimeMilestone } from '@getontime/types';
 
 import * as Editor from '../../../common/components/editor-utils/EditorUtils';
 import SwatchSelect from '../../../common/components/input/colour-input/SwatchSelect';

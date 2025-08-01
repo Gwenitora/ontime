@@ -10,7 +10,7 @@ import {
   isOSCOutput,
   OntimeAction,
   OSCOutput,
-} from 'ontime-types';
+} from '@getontime/types';
 
 import { addAutomation, editAutomation, testOutput } from '../../../../common/api/automation';
 import { maybeAxiosError } from '../../../../common/api/utils';

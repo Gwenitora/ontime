@@ -1,4 +1,4 @@
-import { TimerLifeCycle } from 'ontime-types';
+import { TimerLifeCycle } from '@getontime/types';
 import { makeOntimeEvent, makeRundown } from '../../rundown/__mocks__/rundown.mocks.js';
 import { isAutomationUsed, parseTemplateNested, stringToOSCArgs } from '../automation.utils.js';
 

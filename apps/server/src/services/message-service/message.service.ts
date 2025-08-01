@@ -1,4 +1,4 @@
-import { MessageState, runtimeStorePlaceholder } from 'ontime-types';
+import { MessageState, runtimeStorePlaceholder } from '@getontime/types';
 import { DeepPartial } from 'ts-essentials';
 
 import { throttle } from '../../utils/throttle.js';

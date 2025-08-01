@@ -7,7 +7,7 @@ import {
   OntimeBlock,
   OntimeEvent,
   OntimeMilestone,
-} from 'ontime-types';
+} from '@getontime/types';
 
 import useRundown from '../../../common/hooks-query/useRundown';
 import { useEventSelection } from '../useEventSelection';

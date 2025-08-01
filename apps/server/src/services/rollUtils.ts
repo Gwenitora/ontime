@@ -1,5 +1,5 @@
 import { dayInMs } from 'ontime-utils';
-import { MaybeNumber, PlayableEvent, Rundown } from 'ontime-types';
+import { MaybeNumber, PlayableEvent, Rundown } from '@getontime/types';
 
 import { normaliseEndTime } from './timerUtils.js';
 import { RundownMetadata } from '../api-data/rundown/rundown.types.js';

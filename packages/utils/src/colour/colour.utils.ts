@@ -1,4 +1,4 @@
-import type { RGBColour } from 'ontime-types';
+import type { RGBColour } from '@getontime/types';
 
 import { isColourHex } from '../regex-utils/isColourHex.js';
 

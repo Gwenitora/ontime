@@ -1,4 +1,4 @@
-import { TimerPhase, Playback, OffsetMode } from 'ontime-types';
+import { TimerPhase, Playback, OffsetMode } from '@getontime/types';
 import { deepmerge } from 'ontime-utils';
 import type { RuntimeState } from '../runtimeState.js';
 

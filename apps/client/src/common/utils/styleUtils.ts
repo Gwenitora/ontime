@@ -1,4 +1,4 @@
-import { RGBColour } from 'ontime-types';
+import { RGBColour } from '@getontime/types';
 import { colourToHex, cssOrHexToColour, isLightColour, mixColours } from 'ontime-utils';
 
 type ColourCombination = {

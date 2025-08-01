@@ -1,4 +1,3 @@
-import axios from 'axios';
 import type {
   Automation,
   AutomationDTO,
@@ -6,7 +5,8 @@ import type {
   AutomationSettings,
   Trigger,
   TriggerDTO,
-} from 'ontime-types';
+} from '@getontime/types';
+import axios from 'axios';
 
 import { apiEntryUrl } from './constants';
 

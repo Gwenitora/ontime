@@ -1,4 +1,4 @@
-import { TimerLifeCycle } from 'ontime-types';
+import { TimerLifeCycle } from '@getontime/types';
 
 export const eventTriggerOptions: TimerLifeCycle[] = [
   TimerLifeCycle.onLoad,

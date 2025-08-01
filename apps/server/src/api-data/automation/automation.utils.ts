@@ -1,4 +1,4 @@
-import { EntryId, FilterRule, isOntimeEvent, MaybeNumber, OntimeAction, ontimeActionKeyValues, Rundown } from 'ontime-types';
+import { EntryId, FilterRule, isOntimeEvent, MaybeNumber, OntimeAction, ontimeActionKeyValues, Rundown } from '@getontime/types';
 import { millisToString, removeLeadingZero, splitWhitespace, getPropertyFromPath } from 'ontime-utils';
 import type { OscArgOrArrayInput, OscArgInput } from 'osc-min';
 

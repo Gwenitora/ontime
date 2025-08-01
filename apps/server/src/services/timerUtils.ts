@@ -1,4 +1,4 @@
-import { isOntimeEvent, MaybeNumber, OntimeBlock, Rundown, TimerPhase } from 'ontime-types';
+import { isOntimeEvent, MaybeNumber, OntimeBlock, Rundown, TimerPhase } from '@getontime/types';
 import { calculateTimeUntilStart, dayInMs, getLastEventNormal, isPlaybackActive } from 'ontime-utils';
 import type { RuntimeState } from '../stores/runtimeState.js';
 import { shouldCrashDev } from '../utils/development.js';

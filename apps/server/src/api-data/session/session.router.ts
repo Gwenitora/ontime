@@ -1,7 +1,7 @@
 import express from 'express';
 import type { Request, Response } from 'express';
 import { getErrorMessage } from 'ontime-utils';
-import type { ErrorResponse, GetInfo, GetUrl, SessionStats } from 'ontime-types';
+import type { ErrorResponse, GetInfo, GetUrl, SessionStats } from '@getontime/types';
 import { validateGenerateUrl } from './session.validation.js';
 import * as sessionService from './session.service.js';
 

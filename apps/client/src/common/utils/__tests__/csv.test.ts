@@ -1,4 +1,4 @@
-import { OntimeEntry, ProjectRundowns, Rundown } from 'ontime-types';
+import { OntimeEntry, ProjectRundowns, Rundown } from '@getontime/types';
 
 import { aggregateRundowns, makeCSVFromArrayOfArrays } from '../csv';
 

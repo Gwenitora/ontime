@@ -4,7 +4,7 @@ import {
   MessageResponse,
   ProjectFileListResponse,
   ProjectLogoResponse,
-} from 'ontime-types';
+} from '@getontime/types';
 import { getErrorMessage } from 'ontime-utils';
 
 import type { Request, Response } from 'express';

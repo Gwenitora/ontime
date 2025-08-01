@@ -1,5 +1,5 @@
-import type { MaybeNumber, OntimeEvent } from 'ontime-types';
-import { OffsetMode } from 'ontime-types';
+import type { MaybeNumber, OntimeEvent } from '@getontime/types';
+import { OffsetMode } from '@getontime/types';
 
 import { dayInMs } from './conversionUtils.js';
 

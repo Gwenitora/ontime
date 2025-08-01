@@ -9,7 +9,7 @@ import {
 } from 'react-icons/io5';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { EntryId, OntimeBlock } from 'ontime-types';
+import { EntryId, OntimeBlock } from '@getontime/types';
 
 import IconButton from '../../../common/components/buttons/IconButton';
 import { useContextMenu } from '../../../common/hooks/useContextMenu';

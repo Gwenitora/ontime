@@ -8,7 +8,7 @@ import {
   useRef,
   useState,
 } from 'react';
-import { isOntimeEvent, OntimeEntry, OntimeEvent } from 'ontime-types';
+import { isOntimeEvent, OntimeEntry, OntimeEvent } from '@getontime/types';
 
 import { usePartialRundown } from '../../../common/hooks-query/useRundown';
 

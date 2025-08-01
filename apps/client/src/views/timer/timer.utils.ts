@@ -1,4 +1,4 @@
-import { MaybeNumber, MessageState, OntimeEvent, Playback, TimerMessage, TimerPhase, TimerType } from 'ontime-types';
+import { MaybeNumber, MessageState, OntimeEvent, Playback, TimerMessage, TimerPhase, TimerType } from '@getontime/types';
 import { isPlaybackActive } from 'ontime-utils';
 
 import { getFormattedTimer, getPropertyValue } from '../../features/viewers/common/viewUtils';

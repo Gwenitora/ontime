@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { IoAdd, IoArrowDown, IoArrowUp, IoDuplicateOutline, IoOptions, IoTrash } from 'react-icons/io5';
-import { SupportedEntry } from 'ontime-types';
+import { SupportedEntry } from '@getontime/types';
 
 import { PositionedDropdownMenu } from '../../../../common/components/dropdown-menu/DropdownMenu';
 import { useEntryActions } from '../../../../common/hooks/useEntryAction';

@@ -1,4 +1,4 @@
-import { ProjectData, RefetchKey } from 'ontime-types';
+import { ProjectData, RefetchKey } from '@getontime/types';
 
 import { getDataProvider } from '../../classes/data-provider/DataProvider.js';
 import { join } from 'node:path';

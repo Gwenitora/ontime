@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import { ViewSettings as ViewSettingsType } from '@getontime/types';
 import { useDisclosure } from '@mantine/hooks';
-import { ViewSettings as ViewSettingsType } from 'ontime-types';
 
 import { maybeAxiosError } from '../../../../common/api/utils';
 import Button from '../../../../common/components/buttons/Button';

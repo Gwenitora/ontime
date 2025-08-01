@@ -7,7 +7,7 @@ import {
   RuntimeStore,
   WsPacketToClient,
   WsPacketToServer,
-} from 'ontime-types';
+} from '@getontime/types';
 
 import { isProduction, websocketUrl } from '../../externals';
 import { CLIENT_LIST, CUSTOM_FIELDS, PROJECT_DATA, REPORT, RUNDOWN, RUNTIME, VIEW_SETTINGS } from '../api/constants';

@@ -1,4 +1,4 @@
-import { CustomFields } from 'ontime-types';
+import { CustomFields } from '@getontime/types';
 import { describe, expect, it } from 'vitest';
 
 import { OptionTitle } from '../constants';

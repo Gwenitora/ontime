@@ -22,7 +22,7 @@ import {
   MessageTag,
   RefetchKey,
   MaybeNumber,
-} from 'ontime-types';
+} from '@getontime/types';
 
 import { WebSocket, WebSocketServer } from 'ws';
 import type { Server } from 'http';

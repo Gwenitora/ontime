@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
+import { CustomFields, isOntimeDelay, isOntimeEvent, OntimeEntry, TimeStrategy } from '@getontime/types';
 import { CellContext, ColumnDef } from '@tanstack/react-table';
-import { CustomFields, isOntimeDelay, isOntimeEvent, OntimeEntry, TimeStrategy } from 'ontime-types';
 import { millisToString } from 'ontime-utils';
 
 import DelayIndicator from '../../../../common/components/delay-indicator/DelayIndicator';

@@ -1,4 +1,4 @@
-import { DatabaseModel, Settings, URLPreset } from 'ontime-types';
+import { DatabaseModel, Settings, URLPreset } from '@getontime/types';
 
 import { demoDb } from '../../../models/demoProject.js';
 import { makeOntimeEvent, makeRundown } from '../../../api-data/rundown/__mocks__/rundown.mocks.js';

@@ -1,4 +1,4 @@
-import { CustomFields } from 'ontime-types';
+import { CustomFields } from '@getontime/types';
 
 import { parseCustomFields, sanitiseCustomFields } from '../customFields.parser.js';
 

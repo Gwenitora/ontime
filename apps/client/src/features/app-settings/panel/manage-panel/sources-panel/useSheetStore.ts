@@ -1,4 +1,4 @@
-import { AuthenticationStatus, CustomFields, Rundown } from 'ontime-types';
+import { AuthenticationStatus, CustomFields, Rundown } from '@getontime/types';
 import { defaultImportMap, ImportMap } from 'ontime-utils';
 import { create } from 'zustand';
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { IoPencil } from 'react-icons/io5';
-import { EntryId, OntimeEvent } from 'ontime-types';
+import { EntryId, OntimeEvent } from '@getontime/types';
 
 import Button from '../../common/components/buttons/Button';
 import { useFadeOutOnInactivity } from '../../common/hooks/useFadeOutOnInactivity';

@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { IoCheckmarkDone, IoClose, IoReorderTwo } from 'react-icons/io5';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { OntimeDelay } from 'ontime-types';
+import { OntimeDelay } from '@getontime/types';
 
 import Button from '../../../common/components/buttons/Button';
 import DelayInput from '../../../common/components/input/delay-input/DelayInput';

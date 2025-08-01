@@ -1,5 +1,5 @@
+import { LogLevel } from '@getontime/types';
 import axios, { AxiosError } from 'axios';
-import { LogLevel } from 'ontime-types';
 import { generateId, millisToString } from 'ontime-utils';
 
 import { ontimeQueryClient } from '../queryClient';

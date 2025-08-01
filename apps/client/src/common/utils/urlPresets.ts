@@ -1,5 +1,5 @@
 import { Path, resolvePath } from 'react-router-dom';
-import { OntimeView, URLPreset } from 'ontime-types';
+import { OntimeView, URLPreset } from '@getontime/types';
 import { checkRegex } from 'ontime-utils';
 
 /**

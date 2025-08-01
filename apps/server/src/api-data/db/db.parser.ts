@@ -1,4 +1,4 @@
-import { DatabaseModel, LogOrigin } from 'ontime-types';
+import { DatabaseModel, LogOrigin } from '@getontime/types';
 
 import { logger } from '../../classes/Logger.js';
 

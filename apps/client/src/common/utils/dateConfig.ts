@@ -1,4 +1,4 @@
-import { MaybeNumber } from 'ontime-types';
+import { MaybeNumber } from '@getontime/types';
 import { formatFromMillis, MILLIS_PER_HOUR, MILLIS_PER_MINUTE } from 'ontime-utils';
 
 /**

@@ -1,5 +1,5 @@
+import { ProjectData, ProjectLogoResponse } from '@getontime/types';
 import axios, { AxiosResponse } from 'axios';
-import { ProjectData, ProjectLogoResponse } from 'ontime-types';
 
 import { apiEntryUrl } from './constants';
 

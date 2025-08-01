@@ -2,7 +2,7 @@
  * encapsulate logic related to showing a running timer
  */
 
-import { MaybeNumber } from 'ontime-types';
+import { MaybeNumber } from '@getontime/types';
 import { removeLeadingZero, removeSeconds } from 'ontime-utils';
 
 import { formattedTime } from '../../../overview/overview.utils';

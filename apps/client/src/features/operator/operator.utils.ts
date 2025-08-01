@@ -1,4 +1,4 @@
-import { CustomFields, EntryId, MaybeString, OntimeEvent } from 'ontime-types';
+import { CustomFields, EntryId, MaybeString, OntimeEvent } from '@getontime/types';
 
 import { getPropertyValue } from '../viewers/common/viewUtils';
 

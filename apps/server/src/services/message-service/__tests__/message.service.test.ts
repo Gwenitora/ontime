@@ -1,4 +1,4 @@
-import { RuntimeStore } from 'ontime-types';
+import { RuntimeStore } from '@getontime/types';
 
 import * as messageService from '../message.service.js';
 

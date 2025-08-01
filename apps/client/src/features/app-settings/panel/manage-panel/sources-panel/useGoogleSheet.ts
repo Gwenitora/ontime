@@ -1,5 +1,5 @@
+import { AuthenticationStatus, CustomFields, ProjectRundowns } from '@getontime/types';
 import { useQueryClient } from '@tanstack/react-query';
-import { AuthenticationStatus, CustomFields, ProjectRundowns } from 'ontime-types';
 import { ImportMap } from 'ontime-utils';
 
 import { CUSTOM_FIELDS, RUNDOWN } from '../../../../../common/api/constants';

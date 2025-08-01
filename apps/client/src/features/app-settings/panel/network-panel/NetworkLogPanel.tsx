@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { MessageTag } from 'ontime-types';
+import { MessageTag } from '@getontime/types';
 
 import useScrollIntoView from '../../../../common/hooks/useScrollIntoView';
 import { usePing } from '../../../../common/hooks/useSocket';

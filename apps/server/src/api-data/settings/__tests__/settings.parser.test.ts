@@ -1,4 +1,4 @@
-import { Settings } from 'ontime-types';
+import { Settings } from '@getontime/types';
 
 import { parseSettings } from '../settings.parser.js';
 

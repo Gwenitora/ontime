@@ -1,4 +1,4 @@
-import { EntryId } from 'ontime-types';
+import { EntryId } from '@getontime/types';
 import { create } from 'zustand';
 
 interface SelectedEntryState {

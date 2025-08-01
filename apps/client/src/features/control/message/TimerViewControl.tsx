@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { SecondarySource } from 'ontime-types';
+import { SecondarySource } from '@getontime/types';
 
 import Button from '../../../common/components/buttons/Button';
 import * as Editor from '../../../common/components/editor-utils/EditorUtils';

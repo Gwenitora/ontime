@@ -1,5 +1,5 @@
+import { DatabaseModel, MessageResponse, ProjectData, ProjectFileListResponse, QuickStartData } from '@getontime/types';
 import axios, { AxiosResponse } from 'axios';
-import { DatabaseModel, MessageResponse, ProjectData, ProjectFileListResponse, QuickStartData } from 'ontime-types';
 
 import { makeTable } from '../../views/cuesheet/cuesheet.utils';
 import { aggregateRundowns, makeCSVFromArrayOfArrays } from '../utils/csv';

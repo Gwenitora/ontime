@@ -13,7 +13,7 @@ import {
   TimerPhase,
   TimerState,
   UpcomingEntry,
-} from 'ontime-types';
+} from '@getontime/types';
 import { calculateDuration, checkIsNow, dayInMs, isPlaybackActive } from 'ontime-utils';
 
 import { timeNow } from '../utils/time.js';

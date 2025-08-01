@@ -2,7 +2,7 @@ import { dayInMs, MILLIS_PER_HOUR, MILLIS_PER_MINUTE } from 'ontime-utils';
 
 import { loadRoll } from '../rollUtils.js';
 import { makeRundown } from '../../api-data/rundown/__mocks__/rundown.mocks.js';
-import { PlayableEvent } from 'ontime-types';
+import { PlayableEvent } from '@getontime/types';
 import { initRundown } from '../../api-data/rundown/rundown.service.js';
 import { rundownCache } from '../../api-data/rundown/rundown.dao.js';
 

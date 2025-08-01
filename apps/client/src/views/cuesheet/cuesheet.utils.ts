@@ -6,7 +6,7 @@ import {
   OntimeEntry,
   OntimeEntryCommonKeys,
   ProjectData,
-} from 'ontime-types';
+} from '@getontime/types';
 import { millisToString } from 'ontime-utils';
 
 type CsvHeaderKey = OntimeEntryCommonKeys | keyof CustomFields;

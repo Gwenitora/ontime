@@ -1,4 +1,4 @@
-import type { ProjectRundowns, Rundown } from 'ontime-types';
+import type { ProjectRundowns, Rundown } from '@getontime/types';
 
 /**
  * Gets the first rundown in the project

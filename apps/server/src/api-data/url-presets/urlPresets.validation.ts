@@ -1,4 +1,4 @@
-import { OntimeView } from 'ontime-types';
+import { OntimeView } from '@getontime/types';
 
 import { body, param } from 'express-validator';
 

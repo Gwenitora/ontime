@@ -3,7 +3,7 @@
  * Google Sheets
  */
 
-import type { AuthenticationStatus, CustomFields, ErrorResponse, Rundown } from 'ontime-types';
+import type { AuthenticationStatus, CustomFields, ErrorResponse, Rundown } from '@getontime/types';
 import { getErrorMessage } from 'ontime-utils';
 
 import { Request, Response } from 'express';

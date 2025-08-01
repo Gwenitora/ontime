@@ -1,4 +1,4 @@
-import { OntimeEvent } from 'ontime-types';
+import { OntimeEvent } from '@getontime/types';
 
 export type Subscribed = { id: string; label: string; colour: string; value: string }[];
 export type TitleFields = Pick<OntimeEvent, 'title'>;

@@ -1,4 +1,4 @@
-import { EntryId, OntimeEvent, Playback, TimerType } from 'ontime-types';
+import { EntryId, OntimeEvent, Playback, TimerType } from '@getontime/types';
 import { dayInMs } from 'ontime-utils';
 
 import { ViewExtendedTimer } from '../../common/models/TimeManager.type';

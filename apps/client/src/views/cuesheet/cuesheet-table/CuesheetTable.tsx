@@ -1,8 +1,8 @@
 import { memo, useCallback, useMemo } from 'react';
+import { OntimeEntry, TimeField } from '@getontime/types';
 import { useSessionStorage } from '@mantine/hooks';
 import { useTableNav } from '@table-nav/react';
 import { ColumnDef, getCoreRowModel, useReactTable } from '@tanstack/react-table';
-import { OntimeEntry, TimeField } from 'ontime-types';
 
 import { useEntryActions } from '../../../common/hooks/useEntryAction';
 import { useFollowSelected } from '../../../common/hooks/useFollowComponent';

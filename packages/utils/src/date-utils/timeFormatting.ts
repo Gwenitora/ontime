@@ -1,4 +1,4 @@
-import type { MaybeNumber, TimerType } from 'ontime-types';
+import type { MaybeNumber, TimerType } from '@getontime/types';
 
 import { millisToSeconds, secondsToHours, secondsToMinutes } from './conversionUtils.js';
 

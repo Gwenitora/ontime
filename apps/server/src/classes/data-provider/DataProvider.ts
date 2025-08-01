@@ -8,7 +8,7 @@ import {
   AutomationSettings,
   Rundown,
   ProjectRundowns,
-} from 'ontime-types';
+} from '@getontime/types';
 
 import type { Low } from 'lowdb';
 import { JSONFilePreset } from 'lowdb/node';

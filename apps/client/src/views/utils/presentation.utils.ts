@@ -1,4 +1,4 @@
-import { ViewSettings } from 'ontime-types';
+import { ViewSettings } from '@getontime/types';
 
 /**
  * Which colour should the timer have at a given moment

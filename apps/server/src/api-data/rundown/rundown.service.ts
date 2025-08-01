@@ -12,7 +12,7 @@ import {
   PatchWithId,
   RefetchKey,
   Rundown,
-} from 'ontime-types';
+} from '@getontime/types';
 import { customFieldLabelToKey } from 'ontime-utils';
 
 import { updateRundownData } from '../../stores/runtimeState.js';

@@ -1,4 +1,4 @@
-import { ErrorResponse, Settings } from 'ontime-types';
+import { ErrorResponse, Settings } from '@getontime/types';
 import { getErrorMessage, obfuscate } from 'ontime-utils';
 
 import type { Request, Response } from 'express';

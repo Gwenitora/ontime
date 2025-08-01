@@ -2,7 +2,7 @@ import express from 'express';
 import type { Request, Response } from 'express';
 import { uploadExcel } from './excel.middleware.js';
 import { validateFileExists, validateImportMapOptions } from './excel.validation.js';
-import { CustomFields, ErrorResponse, Rundown } from 'ontime-types';
+import { CustomFields, ErrorResponse, Rundown } from '@getontime/types';
 import { generateRundownPreview, listWorksheets, saveExcelFile } from './excel.service.js';
 
 export const router = express.Router();

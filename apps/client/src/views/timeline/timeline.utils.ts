@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { isOntimeEvent, isPlayableEvent, MaybeString, OntimeEntry, OntimeEvent, PlayableEvent } from 'ontime-types';
+import { isOntimeEvent, isPlayableEvent, MaybeString, OntimeEntry, OntimeEvent, PlayableEvent } from '@getontime/types';
 import {
   dayInMs,
   getEventWithId,

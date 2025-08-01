@@ -1,4 +1,4 @@
-import { OntimeEvent, Playback, Runtime, TimerPhase, TimerState, ViewSettings } from 'ontime-types';
+import { OntimeEvent, Playback, Runtime, TimerPhase, TimerState, ViewSettings } from '@getontime/types';
 import { millisToString } from 'ontime-utils';
 
 import { useAuxTimersTime } from '../../common/hooks/useSocket';

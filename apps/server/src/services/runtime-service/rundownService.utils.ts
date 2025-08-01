@@ -1,5 +1,5 @@
 import { millisToSeconds } from 'ontime-utils';
-import { EntryId, isOntimeEvent, isPlayableEvent, MaybeNumber, OntimeEvent, Rundown, TimerType } from 'ontime-types';
+import { EntryId, isOntimeEvent, isPlayableEvent, MaybeNumber, OntimeEvent, Rundown, TimerType } from '@getontime/types';
 
 import { timerConfig } from '../../setup/config.js';
 

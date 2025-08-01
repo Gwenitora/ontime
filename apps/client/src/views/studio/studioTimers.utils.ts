@@ -1,4 +1,4 @@
-import { OntimeEvent, Runtime, TimerState } from 'ontime-types';
+import { OntimeEvent, Runtime, TimerState } from '@getontime/types';
 import { millisToString } from 'ontime-utils';
 
 import { getOffsetText } from '../../common/utils/offset';

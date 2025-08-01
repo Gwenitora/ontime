@@ -1,4 +1,4 @@
-import { MaybeNumber, OntimeEvent, Playback, TimerPhase } from 'ontime-types';
+import { MaybeNumber, OntimeEvent, Playback, TimerPhase } from '@getontime/types';
 
 import { enDash } from '../../common/utils/styleUtils';
 import { getPropertyValue } from '../../features/viewers/common/viewUtils';

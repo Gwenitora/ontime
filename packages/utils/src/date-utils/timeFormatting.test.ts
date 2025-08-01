@@ -1,4 +1,4 @@
-import { TimerType } from 'ontime-types';
+import { TimerType } from '@getontime/types';
 
 import { dayInMs, MILLIS_PER_HOUR } from './conversionUtils';
 import { formatFromMillis, millisToString, removeLeadingZero } from './timeFormatting';

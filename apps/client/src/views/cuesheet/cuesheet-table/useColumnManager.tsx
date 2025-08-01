@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
+import { OntimeEntry } from '@getontime/types';
 import { useLocalStorage } from '@mantine/hooks';
 import { ColumnDef } from '@tanstack/react-table';
-import { OntimeEntry } from 'ontime-types';
 
 import { debounce } from '../../../common/utils/debounce';
 

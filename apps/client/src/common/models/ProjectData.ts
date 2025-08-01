@@ -1,4 +1,4 @@
-import { ProjectData } from 'ontime-types';
+import { ProjectData } from '@getontime/types';
 
 export const projectDataPlaceholder: ProjectData = {
   title: '',

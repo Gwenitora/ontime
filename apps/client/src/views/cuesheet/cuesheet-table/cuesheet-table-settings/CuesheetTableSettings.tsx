@@ -4,9 +4,9 @@ import { Popover } from '@base-ui-components/react/popover';
 import { Toggle } from '@base-ui-components/react/toggle';
 import { ToggleGroup } from '@base-ui-components/react/toggle-group';
 import { Toolbar } from '@base-ui-components/react/toolbar';
+import { OntimeEntry } from '@getontime/types';
 import { useSessionStorage } from '@mantine/hooks';
 import type { Column } from '@tanstack/react-table';
-import { OntimeEntry } from 'ontime-types';
 
 import Button from '../../../../common/components/buttons/Button';
 import Checkbox from '../../../../common/components/checkbox/Checkbox';

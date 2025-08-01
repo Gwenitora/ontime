@@ -1,4 +1,4 @@
-import { MaybeNumber, OntimeEvent, Settings, TimeFormat } from 'ontime-types';
+import { MaybeNumber, OntimeEvent, Settings, TimeFormat } from '@getontime/types';
 import {
   calculateTimeUntilStart,
   formatFromMillis,

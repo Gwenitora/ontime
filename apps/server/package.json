@@ -37,7 +37,7 @@
     "esbuild": "^0.24.0",
     "eslint": "catalog:",
     "eslint-plugin-prettier": "catalog:",
-    "ontime-types": "workspace:*",
+    "@getontime/types": "workspace:*",
     "prettier": "catalog:",
     "server-timing": "^3.3.3",
     "shx": "^0.3.4",

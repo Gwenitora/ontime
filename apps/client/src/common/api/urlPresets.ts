@@ -1,5 +1,5 @@
+import { URLPreset } from '@getontime/types';
 import axios from 'axios';
-import { URLPreset } from 'ontime-types';
 
 import { apiEntryUrl } from './constants';
 

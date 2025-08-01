@@ -1,5 +1,5 @@
+import { CustomFields, Rundown } from '@getontime/types';
 import axios, { AxiosResponse } from 'axios';
-import { CustomFields, Rundown } from 'ontime-types';
 import { ImportMap } from 'ontime-utils';
 
 import { apiEntryUrl } from './constants';

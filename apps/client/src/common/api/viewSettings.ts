@@ -1,5 +1,5 @@
+import type { ViewSettings } from '@getontime/types';
 import axios from 'axios';
-import type { ViewSettings } from 'ontime-types';
 
 import { apiEntryUrl } from './constants';
 

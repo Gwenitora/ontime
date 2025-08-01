@@ -1,4 +1,4 @@
-import { CustomFields, OntimeBlock, OntimeDelay, OntimeEvent, SupportedEntry, TimeStrategy } from 'ontime-types';
+import { CustomFields, OntimeBlock, OntimeDelay, OntimeEvent, SupportedEntry, TimeStrategy } from '@getontime/types';
 import { dayInMs, MILLIS_PER_HOUR, MILLIS_PER_MINUTE } from 'ontime-utils';
 
 import {

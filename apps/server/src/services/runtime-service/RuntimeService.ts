@@ -10,7 +10,7 @@ import {
   TimerLifeCycle,
   TimerPhase,
   TimerState,
-} from 'ontime-types';
+} from '@getontime/types';
 import { millisToString, validatePlayback } from 'ontime-utils';
 
 import { deepEqual } from 'fast-equals';

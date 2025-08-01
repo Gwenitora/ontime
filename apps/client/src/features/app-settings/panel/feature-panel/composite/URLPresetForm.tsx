@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
-import { OntimeView, URLPreset } from 'ontime-types';
+import { OntimeView, URLPreset } from '@getontime/types';
 
 import { maybeAxiosError, unwrapError } from '../../../../../common/api/utils';
 import Button from '../../../../../common/components/buttons/Button';

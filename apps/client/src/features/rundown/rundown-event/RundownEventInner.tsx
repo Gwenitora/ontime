@@ -10,7 +10,7 @@ import {
   IoTime,
 } from 'react-icons/io5';
 import { LuArrowDownToLine } from 'react-icons/lu';
-import { EndAction, Playback, TimerType, TimeStrategy } from 'ontime-types';
+import { EndAction, Playback, TimerType, TimeStrategy } from '@getontime/types';
 
 import Tooltip from '../../../common/components/tooltip/Tooltip';
 import { cx } from '../../../common/utils/styleUtils';

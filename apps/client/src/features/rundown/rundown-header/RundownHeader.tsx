@@ -2,8 +2,8 @@ import { memo } from 'react';
 import { Toggle } from '@base-ui-components/react/toggle';
 import { ToggleGroup } from '@base-ui-components/react/toggle-group';
 import { Toolbar } from '@base-ui-components/react/toolbar';
+import { OffsetMode } from '@getontime/types';
 import { useSessionStorage } from '@mantine/hooks';
-import { OffsetMode } from 'ontime-types';
 
 import * as Editor from '../../../common/components/editor-utils/EditorUtils';
 import { setOffsetMode, useOffsetMode } from '../../../common/hooks/useSocket';

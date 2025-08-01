@@ -1,4 +1,4 @@
-import { SupportedEntry, OntimeEvent, OntimeBlock, Rundown, CustomFields } from 'ontime-types';
+import { SupportedEntry, OntimeEvent, OntimeBlock, Rundown, CustomFields } from '@getontime/types';
 
 import { defaultRundown } from '../../../models/dataModel.js';
 import { makeOntimeBlock, makeOntimeEvent, makeOntimeMilestone } from '../__mocks__/rundown.mocks.js';

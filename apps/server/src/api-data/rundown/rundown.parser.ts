@@ -14,7 +14,7 @@ import {
   RundownEntries,
   isPlayableEvent,
   isOntimeMilestone,
-} from 'ontime-types';
+} from '@getontime/types';
 import { isObjectEmpty, generateId, getLinkedTimes, getTimeFrom, isNewLatest } from 'ontime-utils';
 
 import { defaultRundown } from '../../models/dataModel.js';

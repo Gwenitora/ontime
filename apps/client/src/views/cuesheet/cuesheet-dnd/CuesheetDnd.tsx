@@ -8,8 +8,8 @@ import {
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
+import { OntimeEntry } from '@getontime/types';
 import { ColumnDef } from '@tanstack/react-table';
-import { OntimeEntry } from 'ontime-types';
 
 import useColumnManager from '../cuesheet-table/useColumnManager';
 

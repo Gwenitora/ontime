@@ -1,6 +1,6 @@
 import { Fragment, useMemo, useState } from 'react';
 import { IoAdd } from 'react-icons/io5';
-import { NormalisedAutomation, Trigger } from 'ontime-types';
+import { NormalisedAutomation, Trigger } from '@getontime/types';
 
 import { deleteTrigger } from '../../../../common/api/automation';
 import { maybeAxiosError } from '../../../../common/api/utils';

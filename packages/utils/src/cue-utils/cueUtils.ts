@@ -1,5 +1,5 @@
-import type { EntryId, OntimeEntry, RundownEntries } from 'ontime-types';
-import { isOntimeEvent } from 'ontime-types';
+import type { EntryId, OntimeEntry, RundownEntries } from '@getontime/types';
+import { isOntimeEvent } from '@getontime/types';
 
 import { getFirstEventNormal, getNextEventNormal, getPreviousEventNormal } from '../rundown-utils/rundownUtils.js';
 import { isNumeric } from '../types/types.js';

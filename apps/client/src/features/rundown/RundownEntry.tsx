@@ -8,7 +8,7 @@ import {
   OntimeEvent,
   Playback,
   SupportedEntry,
-} from 'ontime-types';
+} from '@getontime/types';
 
 import { useEntryActions } from '../../common/hooks/useEntryAction';
 import useMemoisedFn from '../../common/hooks/useMemoisedFn';

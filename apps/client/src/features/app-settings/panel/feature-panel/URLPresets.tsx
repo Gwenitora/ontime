@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IoAdd, IoOpenOutline, IoPencil, IoTrash } from 'react-icons/io5';
-import { URLPreset } from 'ontime-types';
+import { URLPreset } from '@getontime/types';
 
 import Button from '../../../../common/components/buttons/Button';
 import IconButton from '../../../../common/components/buttons/IconButton';

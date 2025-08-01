@@ -1,6 +1,6 @@
 import { IoArrowDown, IoArrowUp, IoBan, IoTime } from 'react-icons/io5';
 import { LuArrowDownToLine } from 'react-icons/lu';
-import { TimerPhase, TimerType } from 'ontime-types';
+import { TimerPhase, TimerType } from '@getontime/types';
 
 import { Corner } from '../../../common/components/editor-utils/EditorUtils';
 import Tooltip from '../../../common/components/tooltip/Tooltip';

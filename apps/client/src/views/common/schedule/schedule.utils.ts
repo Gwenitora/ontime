@@ -1,4 +1,4 @@
-import { OntimeEvent } from 'ontime-types';
+import { OntimeEvent } from '@getontime/types';
 
 /**
  * Gather rules for how to present scheduled times

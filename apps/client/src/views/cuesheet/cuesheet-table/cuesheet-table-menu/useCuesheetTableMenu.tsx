@@ -1,4 +1,4 @@
-import { EntryId, SupportedEntry } from 'ontime-types';
+import { EntryId, SupportedEntry } from '@getontime/types';
 import { create } from 'zustand';
 
 type Anchor = { x: number; y: number };

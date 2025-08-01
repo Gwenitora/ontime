@@ -1,4 +1,4 @@
-import { OffsetMode } from 'ontime-types';
+import { OffsetMode } from '@getontime/types';
 
 import { calculateTimeUntilStart } from './calculateTimeUntilStart';
 import { dayInMs } from './conversionUtils';

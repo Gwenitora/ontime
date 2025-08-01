@@ -1,4 +1,4 @@
-import { MaybeNumber, MaybeString, Playback } from 'ontime-types';
+import { MaybeNumber, MaybeString, Playback } from '@getontime/types';
 
 import { JSONFile } from 'lowdb/node';
 import { deepEqual } from 'fast-equals';

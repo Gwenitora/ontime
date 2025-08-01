@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { IoArrowBack, IoClose, IoSaveOutline } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
-import { EntryId, OntimeEvent } from 'ontime-types';
+import { EntryId, OntimeEvent } from '@getontime/types';
 
 import Button from '../../common/components/buttons/Button';
 import { cx } from '../../common/utils/styleUtils';

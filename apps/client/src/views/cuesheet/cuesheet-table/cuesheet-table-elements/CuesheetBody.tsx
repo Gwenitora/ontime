@@ -1,6 +1,4 @@
 import { RefObject, useEffect } from 'react';
-import { useQueryClient } from '@tanstack/react-query';
-import { RowModel, Table } from '@tanstack/react-table';
 import {
   isOntimeBlock,
   isOntimeDelay,
@@ -9,7 +7,9 @@ import {
   OntimeBlock,
   OntimeEntry,
   Rundown,
-} from 'ontime-types';
+} from '@getontime/types';
+import { useQueryClient } from '@tanstack/react-query';
+import { RowModel, Table } from '@tanstack/react-table';
 import { colourToHex, cssOrHexToColour } from 'ontime-utils';
 
 import { RUNDOWN } from '../../../../common/api/constants';

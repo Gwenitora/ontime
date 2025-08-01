@@ -1,5 +1,5 @@
+import { GetInfo } from '@getontime/types';
 import axios from 'axios';
-import { GetInfo } from 'ontime-types';
 
 import { apiEntryUrl } from './constants';
 

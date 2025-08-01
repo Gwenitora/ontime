@@ -1,4 +1,4 @@
-import { Settings } from 'ontime-types';
+import { Settings } from '@getontime/types';
 
 export const ontimePlaceholderSettings: Settings = {
   version: '4.0.0',

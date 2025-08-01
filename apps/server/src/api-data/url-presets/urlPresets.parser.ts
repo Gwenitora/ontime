@@ -1,4 +1,4 @@
-import { DatabaseModel, URLPreset } from 'ontime-types';
+import { DatabaseModel, URLPreset } from '@getontime/types';
 
 import { ErrorEmitter } from '../../utils/parserUtils.js';
 

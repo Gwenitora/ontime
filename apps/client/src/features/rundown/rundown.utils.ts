@@ -11,7 +11,7 @@ import {
   PlayableEvent,
   RundownEntries,
   SupportedEntry,
-} from 'ontime-types';
+} from '@getontime/types';
 import { checkIsNextDay, isNewLatest } from 'ontime-utils';
 
 type RundownMetadata = {

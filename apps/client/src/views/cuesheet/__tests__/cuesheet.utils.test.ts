@@ -1,4 +1,4 @@
-import { ProjectData } from 'ontime-types';
+import { ProjectData } from '@getontime/types';
 
 import { makeTable, parseField } from '../cuesheet.utils';
 

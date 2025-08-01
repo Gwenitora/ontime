@@ -1,4 +1,4 @@
-import { GetInfo } from 'ontime-types';
+import { GetInfo } from '@getontime/types';
 
 export const ontimePlaceholderInfo: GetInfo = {
   networkInterfaces: [],

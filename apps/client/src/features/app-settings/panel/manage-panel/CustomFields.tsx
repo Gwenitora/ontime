@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IoAdd } from 'react-icons/io5';
-import { CustomField, CustomFieldKey } from 'ontime-types';
+import { CustomField, CustomFieldKey } from '@getontime/types';
 
 import { deleteCustomField, editCustomField, postCustomField } from '../../../../common/api/customFields';
 import Button from '../../../../common/components/buttons/Button';

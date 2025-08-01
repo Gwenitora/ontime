@@ -1,6 +1,6 @@
 import express from 'express';
 import type { Request, Response } from 'express';
-import type { ErrorResponse, ProjectData } from 'ontime-types';
+import type { ErrorResponse, ProjectData } from '@getontime/types';
 import { getErrorMessage } from 'ontime-utils';
 
 import { projectSanitiser } from './projectData.validation.js';

@@ -1,5 +1,5 @@
+import { CustomField, CustomFieldKey, CustomFields } from '@getontime/types';
 import axios from 'axios';
-import { CustomField, CustomFieldKey, CustomFields } from 'ontime-types';
 
 import { apiEntryUrl } from './constants';
 

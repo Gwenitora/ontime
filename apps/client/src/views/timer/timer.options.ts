@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { CustomFields, OntimeEvent, TimerType } from 'ontime-types';
+import { CustomFields, OntimeEvent, TimerType } from '@getontime/types';
 import { validateTimerType } from 'ontime-utils';
 
 import type { SelectOption } from '../../common/components/select/Select';

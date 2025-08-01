@@ -29,7 +29,7 @@
     "no-restricted-imports": [
       "error",
       {
-        "patterns": ["ontime-types/src/*", "ontime-utils/src/*"]
+        "patterns": ["@getontime/types/src/*", "ontime-utils/src/*"]
       }
     ],
     "@typescript-eslint/no-non-null-assertion": "warn",

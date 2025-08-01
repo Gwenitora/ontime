@@ -1,4 +1,4 @@
-import { TriggerDTO, TimerLifeCycle, AutomationDTO, Automation, EntryId } from 'ontime-types';
+import { TriggerDTO, TimerLifeCycle, AutomationDTO, Automation, EntryId } from '@getontime/types';
 
 import { makeRundown } from '../../rundown/__mocks__/rundown.mocks.js';
 

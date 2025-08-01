@@ -1,5 +1,5 @@
 import { CSSProperties, Fragment } from 'react';
-import { CustomFields, OntimeBlock, OntimeEvent, OntimeMilestone } from 'ontime-types';
+import { CustomFields, OntimeBlock, OntimeEvent, OntimeMilestone } from '@getontime/types';
 
 import { getAccessibleColour } from '../../../../common/utils/styleUtils';
 import { EventEditorUpdateFields } from '../EventEditor';

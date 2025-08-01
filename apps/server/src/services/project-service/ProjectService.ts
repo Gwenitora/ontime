@@ -1,4 +1,4 @@
-import { DatabaseModel, LogOrigin, ProjectFileListResponse } from 'ontime-types';
+import { DatabaseModel, LogOrigin, ProjectFileListResponse } from '@getontime/types';
 import { getErrorMessage, getFirstRundown } from 'ontime-utils';
 
 import { copyFile } from 'fs/promises';

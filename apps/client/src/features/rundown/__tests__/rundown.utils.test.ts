@@ -1,4 +1,4 @@
-import { EntryId, OntimeBlock, OntimeDelay, OntimeEvent, RundownEntries, SupportedEntry } from 'ontime-types';
+import { EntryId, OntimeBlock, OntimeDelay, OntimeEvent, RundownEntries, SupportedEntry } from '@getontime/types';
 
 import { makeRundownMetadata, makeSortableList, moveDown, moveUp, orderEntries } from '../rundown.utils';
 

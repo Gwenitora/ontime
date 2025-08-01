@@ -1,5 +1,5 @@
 import { getErrorMessage } from 'ontime-utils';
-import { Automation, AutomationSettings, ErrorResponse, Trigger } from 'ontime-types';
+import { Automation, AutomationSettings, ErrorResponse, Trigger } from '@getontime/types';
 
 import type { Request, Response } from 'express';
 

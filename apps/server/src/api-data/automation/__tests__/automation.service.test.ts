@@ -1,4 +1,4 @@
-import { PlayableEvent, TimerLifeCycle } from 'ontime-types';
+import { PlayableEvent, TimerLifeCycle } from '@getontime/types';
 
 import { makeRuntimeStateData } from '../../../stores/__mocks__/runtimeState.mocks.js';
 import { makeOntimeEvent } from '../../rundown/__mocks__/rundown.mocks.js';

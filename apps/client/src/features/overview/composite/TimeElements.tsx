@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { TbCalendar, TbCalendarClock, TbCalendarDown, TbCalendarStar, TbFlagDown, TbFlagStar } from 'react-icons/tb';
-import { isOntimeBlock, OntimeBlock, OntimeEvent, TimerType } from 'ontime-types';
+import { isOntimeBlock, OntimeBlock, OntimeEvent, TimerType } from '@getontime/types';
 import { isPlaybackActive, millisToString } from 'ontime-utils';
 
 import Tooltip from '../../../common/components/tooltip/Tooltip';

@@ -1,4 +1,4 @@
-import { MaybeNumber, MaybeString, OntimeEvent, TimerType } from 'ontime-types';
+import { MaybeNumber, MaybeString, OntimeEvent, TimerType } from '@getontime/types';
 import { MILLIS_PER_MINUTE, MILLIS_PER_SECOND, millisToString, removeLeadingZero, removeSeconds } from 'ontime-utils';
 
 import type { ViewExtendedTimer } from '../../../common/models/TimeManager.type';

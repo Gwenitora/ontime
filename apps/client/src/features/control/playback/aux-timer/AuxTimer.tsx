@@ -1,5 +1,5 @@
 import { IoArrowDown, IoArrowUp, IoPause, IoPlay, IoStop } from 'react-icons/io5';
-import { Playback, SimpleDirection, SimplePlayback } from 'ontime-types';
+import { Playback, SimpleDirection, SimplePlayback } from '@getontime/types';
 import { millisToString, parseUserTime } from 'ontime-utils';
 
 import TimeInput from '../../../../common/components/input/time-input/TimeInput';

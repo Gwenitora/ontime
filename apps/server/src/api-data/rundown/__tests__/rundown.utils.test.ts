@@ -1,4 +1,4 @@
-import { TimeStrategy, EndAction, TimerType, OntimeEvent, OntimeBlock } from 'ontime-types';
+import { TimeStrategy, EndAction, TimerType, OntimeEvent, OntimeBlock } from '@getontime/types';
 import { MILLIS_PER_HOUR } from 'ontime-utils';
 
 import { assertType } from 'vitest';

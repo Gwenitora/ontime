@@ -1,4 +1,4 @@
-import { CustomField, CustomFields, ErrorResponse } from 'ontime-types';
+import { CustomField, CustomFields, ErrorResponse } from '@getontime/types';
 import { getErrorMessage } from 'ontime-utils';
 
 import express from 'express';

@@ -1,4 +1,4 @@
-import { OntimeEvent, SupportedEntry } from 'ontime-types';
+import { OntimeEvent, SupportedEntry } from '@getontime/types';
 
 /**
  * @description Creates a safe duplicate of an event

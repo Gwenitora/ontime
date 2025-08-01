@@ -1,4 +1,4 @@
-import type { CustomFields, ProjectData } from 'ontime-types';
+import type { CustomFields, ProjectData } from '@getontime/types';
 
 import type { SelectOption } from '../select/Select';
 

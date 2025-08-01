@@ -1,5 +1,4 @@
 import { useCallback } from 'react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
 import {
   EntryId,
   isOntimeBlock,
@@ -12,7 +11,8 @@ import {
   TimeField,
   TimeStrategy,
   TransientEventPayload,
-} from 'ontime-types';
+} from '@getontime/types';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { dayInMs, generateId, MILLIS_PER_SECOND, parseUserTime, swapEventData } from 'ontime-utils';
 
 import { moveDown, moveUp, orderEntries } from '../../features/rundown/rundown.utils';

@@ -1,8 +1,8 @@
 import { CSSProperties } from 'react';
 import { horizontalListSortingStrategy, SortableContext } from '@dnd-kit/sortable';
+import { OntimeEntry } from '@getontime/types';
 import { useSessionStorage } from '@mantine/hooks';
 import { flexRender, HeaderGroup } from '@tanstack/react-table';
-import { OntimeEntry } from 'ontime-types';
 
 import { getAccessibleColour } from '../../../../common/utils/styleUtils';
 import { AppMode, sessionKeys } from '../../../../ontimeConfig';

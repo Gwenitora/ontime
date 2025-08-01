@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { IoLink } from 'react-icons/io5';
-import { CustomFields, isOntimeBlock, isOntimeEvent, Rundown } from 'ontime-types';
+import { CustomFields, isOntimeBlock, isOntimeEvent, Rundown } from '@getontime/types';
 import { millisToString } from 'ontime-utils';
 
 import Tag from '../../../../../../common/components/tag/Tag';

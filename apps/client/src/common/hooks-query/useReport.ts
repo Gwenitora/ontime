@@ -1,5 +1,5 @@
+import { OntimeReport } from '@getontime/types';
 import { useQuery } from '@tanstack/react-query';
-import { OntimeReport } from 'ontime-types';
 import { MILLIS_PER_HOUR } from 'ontime-utils';
 
 import { REPORT } from '../api/constants';

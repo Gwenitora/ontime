@@ -1,4 +1,4 @@
-import { MaybeNumber, TimerType } from 'ontime-types';
+import { MaybeNumber, TimerType } from '@getontime/types';
 import { dayInMs, millisToString } from 'ontime-utils';
 
 import { timerPlaceholder, timerPlaceholderMin } from '../../common/utils/styleUtils';

@@ -1,4 +1,4 @@
-import { DatabaseModel, Settings } from 'ontime-types';
+import { DatabaseModel, Settings } from '@getontime/types';
 
 import { dbModel } from '../../models/dataModel.js';
 

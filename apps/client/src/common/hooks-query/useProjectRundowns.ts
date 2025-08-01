@@ -1,5 +1,5 @@
+import { ProjectRundownsList } from '@getontime/types';
 import { useQuery } from '@tanstack/react-query';
-import { ProjectRundownsList } from 'ontime-types';
 
 import { queryRefetchIntervalSlow } from '../../ontimeConfig';
 import { PROJECT_RUNDOWNS } from '../api/constants';

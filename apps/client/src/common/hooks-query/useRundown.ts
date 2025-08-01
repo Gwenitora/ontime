@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { EntryId, OntimeEntry, Rundown } from '@getontime/types';
 import { useQuery } from '@tanstack/react-query';
-import { EntryId, OntimeEntry, Rundown } from 'ontime-types';
 
 import { queryRefetchIntervalSlow } from '../../ontimeConfig';
 import { RUNDOWN } from '../api/constants';

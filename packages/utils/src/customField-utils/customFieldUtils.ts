@@ -1,4 +1,4 @@
-import type { CustomFields } from 'ontime-types';
+import type { CustomFields } from '@getontime/types';
 
 /**
  * Transforms an alphanumeric label with spaces into a valid key

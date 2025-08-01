@@ -1,4 +1,4 @@
-import { RuntimeStore, SimpleDirection, SimplePlayback } from 'ontime-types';
+import { RuntimeStore, SimpleDirection, SimplePlayback } from '@getontime/types';
 
 import { SimpleTimer } from '../../classes/simple-timer/SimpleTimer.js';
 import { eventStore } from '../../stores/EventStore.js';

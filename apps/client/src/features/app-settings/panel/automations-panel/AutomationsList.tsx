@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import { IoAdd, IoPencil, IoTrash } from 'react-icons/io5';
-import { AutomationDTO, NormalisedAutomation } from 'ontime-types';
+import { AutomationDTO, NormalisedAutomation } from '@getontime/types';
 
 import { deleteAutomation } from '../../../../common/api/automation';
 import { maybeAxiosError } from '../../../../common/api/utils';

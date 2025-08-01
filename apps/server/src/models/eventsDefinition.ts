@@ -7,7 +7,7 @@ import {
   SupportedEntry,
   TimeStrategy,
   TimerType,
-} from 'ontime-types';
+} from '@getontime/types';
 
 export const event: Omit<OntimeEvent, 'id' | 'cue'> = {
   type: SupportedEntry.Event,

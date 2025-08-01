@@ -1,4 +1,4 @@
-import { DatabaseModel, CustomFields, CustomField } from 'ontime-types';
+import { DatabaseModel, CustomFields, CustomField } from '@getontime/types';
 import { checkRegex, customFieldLabelToKey } from 'ontime-utils';
 
 import type { ErrorEmitter } from '../../utils/parserUtils.js';

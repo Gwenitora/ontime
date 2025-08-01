@@ -1,4 +1,4 @@
-import { DatabaseModel, ProjectData } from 'ontime-types';
+import { DatabaseModel, ProjectData } from '@getontime/types';
 
 import { dbModel } from '../../models/dataModel.js';
 import { ErrorEmitter } from '../../utils/parserUtils.js';

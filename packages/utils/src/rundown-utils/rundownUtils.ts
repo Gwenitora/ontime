@@ -6,8 +6,8 @@ import type {
   PlayableEvent,
   Rundown,
   RundownEntries,
-} from 'ontime-types';
-import { isOntimeBlock, isOntimeEvent, isPlayableEvent } from 'ontime-types';
+} from '@getontime/types';
+import { isOntimeBlock, isOntimeEvent, isPlayableEvent } from '@getontime/types';
 
 type IndexAndEntry = { entry: OntimeEntry | null; index: number | null };
 

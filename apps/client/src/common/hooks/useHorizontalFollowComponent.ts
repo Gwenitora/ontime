@@ -1,5 +1,5 @@
 import { RefObject, useCallback, useEffect } from 'react';
-import { EntryId } from 'ontime-types';
+import { EntryId } from '@getontime/types';
 
 function scrollToComponent<ComponentRef extends HTMLElement, ScrollRef extends HTMLElement>(
   componentRef: RefObject<ComponentRef> | null,

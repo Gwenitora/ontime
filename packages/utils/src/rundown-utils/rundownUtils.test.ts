@@ -1,5 +1,5 @@
-import type { OntimeBlock, OntimeDelay, OntimeEntry, OntimeEvent } from 'ontime-types';
-import { SupportedEntry } from 'ontime-types';
+import type { OntimeBlock, OntimeDelay, OntimeEntry, OntimeEvent } from '@getontime/types';
+import { SupportedEntry } from '@getontime/types';
 
 import {
   getLastEvent,

@@ -1,6 +1,6 @@
 import { KeyboardEvent, useState } from 'react';
+import { SupportedEntry } from '@getontime/types';
 import { useDebouncedCallback } from '@mantine/hooks';
-import { SupportedEntry } from 'ontime-types';
 
 import Input from '../../../common/components/input/input/Input';
 import Modal from '../../../common/components/modal/Modal';

@@ -1,4 +1,4 @@
-import { EndAction, EntryCustomFields, OntimeEvent, SupportedEntry, TimerType, TimeStrategy } from 'ontime-types';
+import { EndAction, EntryCustomFields, OntimeEvent, SupportedEntry, TimerType, TimeStrategy } from '@getontime/types';
 
 import { cloneEvent } from '../clone';
 

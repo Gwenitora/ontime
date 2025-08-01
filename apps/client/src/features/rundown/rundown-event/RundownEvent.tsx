@@ -12,7 +12,7 @@ import {
 import { TbFlagFilled } from 'react-icons/tb';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { EndAction, EntryId, OntimeEvent, Playback, TimerType, TimeStrategy } from 'ontime-types';
+import { EndAction, EntryId, OntimeEvent, Playback, TimerType, TimeStrategy } from '@getontime/types';
 import { isPlaybackActive } from 'ontime-utils';
 
 import { useContextMenu } from '../../../common/hooks/useContextMenu';

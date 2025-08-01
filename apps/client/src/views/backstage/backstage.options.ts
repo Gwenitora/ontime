@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { CustomFields, OntimeEvent, ProjectData } from 'ontime-types';
+import { CustomFields, OntimeEvent, ProjectData } from '@getontime/types';
 
 import { getTimeOption } from '../../common/components/view-params-editor/common.options';
 import { OptionTitle } from '../../common/components/view-params-editor/constants';

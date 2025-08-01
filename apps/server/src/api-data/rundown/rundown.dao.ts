@@ -24,7 +24,7 @@ import {
   OntimeEvent,
   PatchWithId,
   Rundown,
-} from 'ontime-types';
+} from '@getontime/types';
 import { customFieldLabelToKey, insertAtIndex } from 'ontime-utils';
 
 import { getDataProvider } from '../../classes/data-provider/DataProvider.js';

@@ -1,4 +1,4 @@
-import { RuntimeStore, MessageTag } from 'ontime-types';
+import { RuntimeStore, MessageTag } from '@getontime/types';
 
 import { socket } from '../adapters/WebsocketAdapter.js';
 import { isEmptyObject } from '../utils/parserUtils.js';

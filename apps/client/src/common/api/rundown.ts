@@ -1,4 +1,3 @@
-import axios, { AxiosResponse } from 'axios';
 import {
   EntryId,
   MessageResponse,
@@ -7,7 +6,8 @@ import {
   ProjectRundownsList,
   Rundown,
   TransientEventPayload,
-} from 'ontime-types';
+} from '@getontime/types';
+import axios, { AxiosResponse } from 'axios';
 
 import { apiEntryUrl } from './constants';
 

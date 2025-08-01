@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { QuickStartData } from 'ontime-types';
+import { QuickStartData } from '@getontime/types';
 import { parseUserTime } from 'ontime-utils';
 
 import { quickProject } from '../../../common/api/db';

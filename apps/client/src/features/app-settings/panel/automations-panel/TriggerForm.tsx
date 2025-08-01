@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { NormalisedAutomation, TimerLifeCycle, TriggerDTO } from 'ontime-types';
+import { NormalisedAutomation, TimerLifeCycle, TriggerDTO } from '@getontime/types';
 
 import { addTrigger, editTrigger } from '../../../../common/api/automation';
 import { maybeAxiosError } from '../../../../common/api/utils';

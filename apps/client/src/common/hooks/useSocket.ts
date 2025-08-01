@@ -1,4 +1,4 @@
-import { OffsetMode, RuntimeStore, SimpleDirection, SimplePlayback, TimerMessage } from 'ontime-types';
+import { OffsetMode, RuntimeStore, SimpleDirection, SimplePlayback, TimerMessage } from '@getontime/types';
 
 import { useRuntimeStore } from '../stores/runtime';
 import { sendSocket } from '../utils/socket';

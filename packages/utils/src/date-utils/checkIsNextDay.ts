@@ -1,4 +1,4 @@
-import type { OntimeEvent } from 'ontime-types';
+import type { OntimeEvent } from '@getontime/types';
 
 import { dayInMs } from './conversionUtils.js';
 

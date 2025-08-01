@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IoPencil, IoTrash, IoWarningOutline } from 'react-icons/io5';
-import { NormalisedAutomation, TimerLifeCycle } from 'ontime-types';
+import { NormalisedAutomation, TimerLifeCycle } from '@getontime/types';
 
 import IconButton from '../../../../common/components/buttons/IconButton';
 import Tag from '../../../../common/components/tag/Tag';

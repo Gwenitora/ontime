@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { isOntimeBlock, isOntimeEvent, OntimeEntry } from 'ontime-types';
+import { isOntimeBlock, isOntimeEvent, OntimeEntry } from '@getontime/types';
 
 import useRundown from '../../../common/hooks-query/useRundown';
 

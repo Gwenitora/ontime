@@ -1,4 +1,4 @@
-import { ViewSettings } from 'ontime-types';
+import { ViewSettings } from '@getontime/types';
 
 export const viewsSettingsPlaceholder: ViewSettings = {
   dangerColor: '#ff7300',
