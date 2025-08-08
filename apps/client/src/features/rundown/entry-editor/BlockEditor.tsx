@@ -51,7 +51,7 @@ export default function BlockEditor({ block }: BlockEditorProps) {
 
   const isEditor = window.location.pathname.includes('editor');
   const planOffset = typeof block.targetDuration !== 'number' ? null : block.duration - block.targetDuration;
-  const planOffsetLabel = planOffset !== null ? getOffsetState(planOffset * -1) : null;
+  const planOffsetLabel = planOffset !== null ? getOffsetState(planOffset) : null;
 
   return (
     <div className={style.content}>
