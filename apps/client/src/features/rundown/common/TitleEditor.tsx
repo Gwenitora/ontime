@@ -14,8 +14,7 @@ interface TitleEditorProps {
   className?: string;
 }
 
-export default function EditableBlockTitle(props: TitleEditorProps) {
-  const { title, eventId, placeholder, className } = props;
+export default function TitleEditor({ title, eventId, placeholder, className }: TitleEditorProps) {
   const { updateEntry } = useEntryActions();
   const ref = useRef<HTMLInputElement | null>(null);
   const submitCallback = useCallback(
@@ -38,7 +37,7 @@ export default function EditableBlockTitle(props: TitleEditorProps) {
 
   return (
     <Input
-      data-testid='block__title'
+      data-testid='entry__title'
       variant='ghosted'
       fluid
       ref={ref}

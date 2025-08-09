@@ -1,6 +1,6 @@
 @use '../blockMixins' as *;
 
-.block {
+.group {
   @include block-styling;
 
   margin-block: 0.5rem;

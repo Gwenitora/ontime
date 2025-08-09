@@ -5,7 +5,7 @@ import {
   EndAction,
   EntryCustomFields,
   NormalisedAutomation,
-  OntimeBlock,
+  OntimeGroup,
   OntimeEntry,
   ProjectData,
   ProjectRundowns,
@@ -317,7 +317,8 @@ export function migrateAutomations(jsonData: object): AutomationSettings | undef
  *  - add parent
  *
  * - block:
- *  - add all the new blocks of the block that is now a group
+ *  - rename to group
+ *  - create group data
  */
 export function migrateRundown(
   jsonData: object,
@@ -390,15 +391,18 @@ export function migrateRundown(
           dayOffset: 0,
           gap: 0,
         });
-      } else if (entry.type === 'block') {
+        /**
+         * We leave here an entry point for blocks for the alpha testers, should remove this after a while
+         */
+      } else if (entry.type === SupportedEntry.Group || entry.type === 'block') {
         if (parent) {
-          (newRundown.entries[parent] as OntimeBlock).entries = [...children];
+          (newRundown.entries[parent] as OntimeGroup).entries = [...children];
           children = [];
         }
         parent = entry.id;
         append({
           id: entry.id,
-          type: SupportedEntry.Block,
+          type: SupportedEntry.Group,
           title: entry.title,
           note: '', // leave blank
           entries: [], // leave empty
@@ -418,7 +422,7 @@ export function migrateRundown(
     }
 
     if (parent) {
-      (newRundown.entries[parent] as OntimeBlock).entries = [...children];
+      (newRundown.entries[parent] as OntimeGroup).entries = [...children];
       children = [];
     }
 

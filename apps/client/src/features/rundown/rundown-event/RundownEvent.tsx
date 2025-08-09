@@ -130,7 +130,7 @@ export default function RundownEvent({
               }),
           },
           { type: 'divider' },
-          { type: 'item', label: 'Group', icon: IoFolder, onClick: () => actionHandler('group') },
+          { type: 'item', label: 'Group', icon: IoFolder, onClick: () => actionHandler('make-group') },
           { type: 'divider' },
           { type: 'item', label: 'Delete', icon: IoTrash, onClick: () => actionHandler('delete') },
         ]

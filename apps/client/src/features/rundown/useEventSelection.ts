@@ -12,8 +12,8 @@ interface EventSelectionStore {
   selectedEvents: Set<EntryId>;
   anchoredIndex: MaybeNumber;
   cursor: MaybeString;
-  entryMode: 'event' | 'block' | null;
-  setSelectedBlock: (selectionArgs: { id: EntryId }) => void;
+  entryMode: 'event' | 'group' | null;
+  setSelectedGroup: (selectionArgs: { id: EntryId }) => void;
   setSelectedEvents: (selectionArgs: { id: EntryId; index: number; selectMode: SelectionMode }) => void;
   clearSelectedEvents: () => void;
   clearMultiSelect: () => void;
@@ -25,14 +25,14 @@ export const useEventSelection = create<EventSelectionStore>()((set, get) => ({
   anchoredIndex: null,
   cursor: null,
   entryMode: null,
-  setSelectedBlock: ({ id }) => {
-    set({ selectedEvents: new Set([id]), anchoredIndex: null, cursor: id, entryMode: 'block' });
+  setSelectedGroup: ({ id }) => {
+    set({ selectedEvents: new Set([id]), anchoredIndex: null, cursor: id, entryMode: 'group' });
   },
   setSelectedEvents: ({ id, index, selectMode }) => {
     const { selectedEvents, anchoredIndex, entryMode } = get();
 
-    // if we are in block mode, we replace the selection and change the mode
-    if (entryMode === 'block') {
+    // if we are in group mode, we replace the selection and change the mode
+    if (entryMode === 'group') {
       return set({ selectedEvents: new Set([id]), anchoredIndex: index, cursor: id, entryMode: 'event' });
     }
 

@@ -24,7 +24,7 @@ interface RundownMilestoneProps {
 export default function RundownMilestone({ colour, cue, entryId, hasCursor, title }: RundownMilestoneProps) {
   const handleRef = useRef<null | HTMLSpanElement>(null);
   const { updateEntry, deleteEntry } = useEntryActions();
-  const { selectedEvents, setSelectedBlock } = useEventSelection();
+  const { selectedEvents, setSelectedGroup } = useEventSelection();
 
   const [onContextMenu] = useContextMenu<HTMLDivElement>([
     {
@@ -61,7 +61,7 @@ export default function RundownMilestone({ colour, cue, entryId, hasCursor, titl
     }
 
     // UI indexes are 1 based
-    setSelectedBlock({ id: entryId });
+    setSelectedGroup({ id: entryId });
   };
 
   const handleUpdate = (field: 'cue' | 'title', value: string) => {
